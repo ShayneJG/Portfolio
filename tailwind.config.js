@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        VT323: ["VT323"],
+        lora: ["Lora"],
       },
       keyframes: {
         flash: {

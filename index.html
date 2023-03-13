@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html
   lang="en"
-  class="h-full w-full bg-gradient-to-r from-[#000000] to-[#171b1d]"
+  class="h-full w-full p-5 text-white bg-gradient-to-r font-lora from-[#000000] to-[#171b1d]"
 >
   <head>
     <meta charset="UTF-8" />
@@ -11,17 +11,21 @@
     <link rel="stylesheet" href="tw.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/682370a17d.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <header>
-    <h1 class="text-white flex font-VT323 text-3xl justify-center">
+    <h1 class="text-white flex text-3xl justify-center">
       Shayne Geilman
       <div class="text-white animate-flash">_</div>
     </h1>
-    <div id="contact_links ">
+    <div id="contact_links" class="mt-2">
       <ul class="flex text-white justify-center h-10">
         <li>
           <a href="https://github.com/ShayneJG"
@@ -34,37 +38,57 @@
           ></a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/shayne-geilman-b0731a96/"
-            ><i class="fa-solid fa-envelope m-2"></i
-          ></a>
+          <a href=""><i class="fa-solid fa-envelope m-2"></i></a>
         </li>
       </ul>
     </div>
   </header>
   <body>
-    <div id="description" class="text-white">
-      <h1 id="description_title">Welcome</h1>
+    <div id="description" class="text-white flex flex-col">
+      <h1 id="description_title" class="text-center text-lg mb-5">
+        Web Developer
+      </h1>
+
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed
-        lobortis sapien. Vestibulum ante ipsum primis in faucibus orci luctus et
-        ultrices posuere cubilia curae; Mauris quis imperdiet metus, eu euismod
-        lacus. Mauris vel efficitur sem, eget fringilla justo. Sed velit dui,
-        facilisis sed leo porta, interdum fringilla odio. Integer convallis
-        venenatis elit, in bibendum orci imperdiet eu. Duis dolor dolor, congue
-        in turpis nec, lobortis congue ex. Mauris aliquet pellentesque eros eget
-        elementum.
+        I am a junior web dev looking for a position that allows me to gain
+        valuable experience and grow. This page serves as a simple landing page
+        to view my projects and contact details.
       </p>
     </div>
     <div>
-      <h1>Skills</h1>
-      <ul>
-        <li>
-          <div><h2>React</h2></div>
-          <p>1 year experience</p>
-        </li>
-      </ul>
+      <h1 class="text-center text-lg m-5">Skills</h1>
+      <div class="flex flex-row justify-between pl-5 pr-5 pt-2">
+        <ul>
+          <li class="flex m-1">
+            <img src="./assets/HTML5_Badge_64.png" class="h-5 pr-1" />
+            <h2>HTML</h2>
+          </li>
+          <li class="flex m-1">
+            <img src="./assets/css logo.png" class="h-5 pr-1" />
+            <h2>CSS</h2>
+          </li>
+          <li class="flex m-1">
+            <img src="./assets/javascript logo.png" class="h-5 pr-1" />
+            <h2>Javascript</h2>
+          </li>
+        </ul>
+        <ul>
+          <li class="flex m-1">
+            <img src="./assets/react logo.png" class="h-5 pr-1" />
+            <h2>React</h2>
+          </li>
+          <li class="flex m-1">
+            <img src="./assets/node logo.png" class="h-5 pr-1" />
+            <h2>Node.js</h2>
+          </li>
+          <li class="flex m-1">
+            <img src="./assets/mongo logo.png " class="h-5 w-6 pr-1" />
+            <h2>MongoDB</h2>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div id="projects"><h1>Projects</h1></div>
+    <div id="projects"><h1 class="text-center text-lg m-5">Projects</h1></div>
     <div>
       <h1>Contact</h1>
       <form></form>
