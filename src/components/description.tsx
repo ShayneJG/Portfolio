@@ -20,3 +20,5 @@ function Description() {
     </div>
   );
 }
+
+export default Description;
