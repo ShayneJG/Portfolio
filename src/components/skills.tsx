@@ -1,6 +1,6 @@
 function Skills() {
   return (
-    <div>
+    <div className="bg-[#161616]">
       <h2>skills()</h2>
       <div>
         <div id="left">
@@ -38,7 +38,7 @@ function ListCreator(item: skills) {
   return (
     <li className="m-auto" key={item.text}>
       <img className="h-10 m-auto" src={item.image}></img>
-      <p className="">{item.text}</p>
+      <p className="text-white">{item.text}</p>
     </li>
   );
 }
