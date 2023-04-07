@@ -7,16 +7,36 @@ function Header() {
       </div>
       <nav
         id="navbar"
-        className="flex w-full px-10 justify-between text-white font-bold "
+        className="flex w-full px-10 justify-between text-white text-lg font-bold "
       >
         <a>About</a>
         <a>Skills</a>
         <a>Projects</a>
       </nav>
-      <div id="socials" className="flex w-full px-10 justify-between ">
-        <a>LinkedIn</a>
-        <a>Github</a>
-        <a>Contact Me</a>
+      <div
+        id="socials"
+        className="flex w-full px-10 mt-3 justify-between text-white text-lg font-bold flex-wrap"
+      >
+        <a className="flex">
+          <img
+            className="h-6"
+            src="src/assets/linkedIn.png"
+            alt="linkedinlogo"
+          />
+          LinkedIn
+        </a>
+        <a className="flex">
+          <img className="h-6" src="src/assets/github.png" alt="githublogo" />
+          Github
+        </a>
+        <a className="flex">
+          <img
+            className="h-6"
+            src="src/assets/contact.png"
+            alt="contactmelogo"
+          />
+          Contact me
+        </a>
       </div>
     </div>
   );

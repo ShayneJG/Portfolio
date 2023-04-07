@@ -30,8 +30,11 @@ let projects: Project[] = [
 
 function Projects() {
   return (
-    <div>
-      <h1>Projects</h1>
+    <div className="h-56 mt-10">
+      <div className="font-bold flex">
+        <h1 className="text-[#70FF00] pl-10 pb-5">projects</h1>
+        <p className="text-[#E0E0E0]">( )</p>
+      </div>
       <Carousel show={2.5} slide={2} swiping={true}>
         {projects.map((i) => {
           return <Item details={i} key={i.description} />;
@@ -47,9 +50,9 @@ interface ItemProps {
 
 function Item({ details }: ItemProps) {
   return (
-    <div className="relative mx-5">
+    <div className="relative mx-4">
       <a href={details.URL} target="_blank">
-        <img className="h-44 w-full rounded-lg" src={details.image} />
+        <img className="rounded-lg h-28 w-full" src={details.image} />
         <span className="absolute bottom-0 text-white font-bold bg-[#4C4C4CA8]/50 w-full text-center ">
           <p>{details.description}</p>
           <div className="flex justify-between mx-5">
