@@ -30,6 +30,12 @@ let projects: Project[] = [
   },
 ];
 
+const responsive = {
+  0: { items: 1 },
+  568: { items: 2 },
+  1024: { items: 3 },
+};
+
 function Projects() {
   return (
     <div className="h-80 mt-10">
@@ -40,16 +46,11 @@ function Projects() {
 
       <AliceCarousel
         mouseTracking
+        responsive={responsive}
         items={projects.map((i) => {
           return <Item details={i} key={i.description} />;
         })}
       />
-
-      {/* <Carousel show={1.4} slide={1} swiping={true}>
-        {projects.map((i) => {
-          return <Item details={i} key={i.description} />;
-        })}
-      </Carousel> */}
     </div>
   );
 }
