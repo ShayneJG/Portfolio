@@ -61,10 +61,18 @@ interface ItemProps {
 
 function Item({ details }: ItemProps) {
   return (
-    <div className="relative mx-4 h-44 w-72">
+    <div className="relative mx-4 h-44 w-72 hover:border hover:border-[#70FF00] hover:rounded-lg group ">
       <a href={details.URL} target="_blank">
-        <img className="rounded-lg h-full w-full" src={details.image} />
-        <span className="absolute bottom-0 text-white font-bold bg-[#4C4C4CA8]/50 w-full text-center ">
+        <img
+          className="rounded-lg h-full w-full group-hover:opacity-50"
+          src={details.image}
+        />
+        <img
+          src="src/assets/open-in-new 1.png"
+          alt="popout img"
+          className="hidden group-hover:block absolute top-0 left-0 right-0 bottom-0 m-auto h-1/4"
+        />
+        <span className="absolute bottom-0 text-white font-bold bg-[#4C4C4CA8]/50 w-full text-center group-hover:opacity-50">
           <p>{details.description}</p>
           <div className="flex justify-between mx-5">
             {details.tools.map((tool) => {
