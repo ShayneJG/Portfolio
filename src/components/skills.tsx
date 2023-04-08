@@ -12,7 +12,6 @@ function Skills() {
             })}
           </ul>
         </div>
-        <div id="right"></div>
       </div>
     </div>
   );
