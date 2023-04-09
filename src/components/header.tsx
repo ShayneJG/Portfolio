@@ -7,7 +7,7 @@ function Header() {
       </div>
       <nav
         id="navbar"
-        className="flex w-full px-10 justify-between text-white text-lg font-bold "
+        className="flex w-full px-5 justify-between text-white text-lg font-bold "
       >
         <a>About</a>
         <a>Skills</a>
@@ -15,7 +15,7 @@ function Header() {
       </nav>
       <div
         id="socials"
-        className="flex w-full px-10 mt-3 justify-between text-white text-lg font-bold flex-wrap"
+        className="flex w-full px-5 mt-3 justify-between text-white text-lg font-bold flex-wrap"
       >
         <a className="flex">
           <img

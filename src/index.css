@@ -1,8 +1,8 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import "react-alice-carousel/lib/alice-carousel.css";
 
 html {
   background: linear-gradient(
