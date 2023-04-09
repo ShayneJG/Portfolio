@@ -9,9 +9,9 @@ function Header() {
         id="navbar"
         className="flex w-full px-5 justify-between text-white text-lg font-bold "
       >
-        <a>About</a>
-        <a>Skills</a>
-        <a>Projects</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
       </nav>
       <div
         id="socials"

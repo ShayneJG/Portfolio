@@ -2,7 +2,7 @@ function Description() {
   return (
     <div>
       <div>
-        <h2>aboutMe()</h2>
+        <h2 id="about">aboutMe()</h2>
         <p>Placeholder text. </p>
       </div>
       <div>

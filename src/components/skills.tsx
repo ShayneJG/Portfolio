@@ -1,7 +1,7 @@
 function Skills() {
   return (
     <div className="bg-[#161616]">
-      <h2>skills()</h2>
+      <h2 id="skills">skills()</h2>
       <div>
         <div id="left">
           <ul className="w-full flex">
