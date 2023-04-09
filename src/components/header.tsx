@@ -15,28 +15,34 @@ function Header() {
       </nav>
       <div
         id="socials"
-        className="flex w-full px-5 mt-3 justify-between text-white text-lg font-bold flex-wrap"
+        className="flex w-full px-5 mt-3 justify-between text-white text-lg font-bold flex-wrap  items-center "
       >
-        <a className="flex">
+        <a className="flex items-center">
           <img
-            className="h-6"
+            className="h-4 pr-1"
             src="src/assets/linkedIn.png"
             alt="linkedinlogo"
           />
           LinkedIn
         </a>
-        <a className="flex">
-          <img className="h-6" src="src/assets/github.png" alt="githublogo" />
+        <a className="flex items-center">
+          <img
+            className="h-4 pr-1"
+            src="src/assets/github.png"
+            alt="githublogo"
+          />
           Github
         </a>
-        <a className="flex">
-          <img
-            className="h-6"
-            src="src/assets/contact.png"
-            alt="contactmelogo"
-          />
-          Contact me
-        </a>
+        <div className="bg-gradient-to-t from-white to-[#70FF008C] rounded-md p-1">
+          <a className="flex items-center bg-black px-2 rounded-md">
+            <img
+              className="h-3 pr-1"
+              src="src/assets/contact.png"
+              alt="contactmelogo"
+            />
+            Contact me
+          </a>
+        </div>
       </div>
     </div>
   );
