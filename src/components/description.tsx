@@ -9,7 +9,7 @@ function Description() {
           <p className="text-[#E0E0E0] text-2xl">( )</p>
         </div>
 
-        <p className="text-[#F2F2F2] font-normal leading-8">
+        <p className="text-[#F2F2F2] font-normal text-sm leading-8 mx-5">
           I am a self-taught developer eager to get started with a career in web
           development. My coding journey began with Visual Basic in highschool
           through to Java at TAFE. After a brief tangent in the publishing and
@@ -24,15 +24,14 @@ function Description() {
         </p>
       </div>
       <div>
-        <div>
-          <h3>Front-end Developer</h3>
-          <a>projects</a>
-          <span>&lt;/&gt;</span>
-        </div>
-        <div>
-          <h3>Freelancer</h3>
-          <a>Hire me!</a>
-          <span>{}</span>
+        <div className="bg-[#4F4F4F] my-10 shadow-md rounded-md font-courier flex justify-between items-center p-3 w-2/3 mx-auto">
+          <div>
+            <h3 className="text-white font-bold">Front-end Developer</h3>
+            <a href="#projects" className="text-[#70FF00] underline">
+              Projects
+            </a>
+          </div>
+          <span className="text-[#70FF00]">&lt;/&gt;</span>
         </div>
       </div>
     </div>

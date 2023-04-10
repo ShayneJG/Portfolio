@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ["Roboto", "sans"],
+        roboto: ["Roboto", "sans-serif"],
+        courier: ["Courier Prime", "monospace"],
       },
     },
   },
