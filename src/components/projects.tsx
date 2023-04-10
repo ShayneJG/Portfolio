@@ -77,8 +77,8 @@ function Item({ details }: ItemProps) {
         <span className="absolute bottom-0 text-white font-bold bg-[#4C4C4CA8]/50 w-full text-center group-hover:opacity-50">
           <p>{details.description}</p>
           <div className="flex justify-between mx-5">
-            {details.tools.map((tool, index) => {
-              return <p key={index}>{tool}</p>;
+            {details.tools.map((tool) => {
+              return <p key={tool}>{tool}</p>;
             })}
           </div>
         </span>
