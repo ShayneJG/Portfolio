@@ -11,13 +11,13 @@ function Introduction() {
         <div className="text-[#828282] flex justify-between">
           <div className="flex text-left">
             <span className="text-5xl ">1</span>
-            <div className="block">
+            <div className="block font-normal uppercase">
               <p>years of </p> <p>experience</p>
             </div>
           </div>
           <div className="flex text-left">
-            <span className="text-5xl ">3</span>
-            <div className="block">
+            <span className="text-5xl pr-1">3</span>
+            <div className="block font-normal uppercase">
               <p>Projects </p>
               <p>completed</p>
             </div>
