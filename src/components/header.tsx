@@ -64,7 +64,7 @@ function Header() {
             action="https://formspree.io/f/mrgvlapv"
             method="POST"
             id="contact"
-            className="absolut flex flex-col border-2 rounded-lg bg-black border-[#70FF00] left-0 right-0 bottom-0 mx-5 p-5 top-20 h-1/2 justify-between"
+            className="absolute flex flex-col border-2 rounded-lg bg-black border-[#70FF00] left-0 right-0 bottom-0 top-20 mx-auto p-5 h-1/2 justify-between max-w-max	"
           >
             <div>
               <label className="block mb-2">
@@ -103,13 +103,19 @@ function Header() {
             </div>
             <div className="flex justify-between mx-20">
               <button
+                className="m-3 border rounded-md bg-slate-700 p-2"
                 onClick={() => {
                   setContact(false);
                 }}
               >
                 Cancel
               </button>
-              <button type="submit">Submit</button>
+              <button
+                className="m-3 border rounded-md bg-slate-700 p-2"
+                type="submit"
+              >
+                Submit
+              </button>
             </div>
           </form>
         )}
