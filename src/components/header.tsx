@@ -12,28 +12,34 @@ function Header() {
         id="navbar"
         className="flex w-full px-5 justify-between text-white text-lg font-bold "
       >
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <a className="hover:text-[#70FF00]" href="#about">
+          About
+        </a>
+        <a className="hover:text-[#70FF00]" href="#skills">
+          Skills
+        </a>
+        <a className="hover:text-[#70FF00]" href="#projects">
+          Projects
+        </a>
       </nav>
       <div
         id="socials"
         className="flex w-full px-5 mt-3 justify-between text-white text-lg font-bold flex-wrap  items-center "
       >
         <a
-          className="flex items-center"
+          className="flex items-center hover:text-[#70FF00]"
           href="https://www.linkedin.com/in/shayne-geilman-b0731a96/"
           target="_blank"
         >
           <img
-            className="h-4 pr-1"
+            className="h-4 pr-1 hover:text-[#70FF00]"
             src="src/assets/linkedIn.png"
             alt="linkedinlogo"
           />
           LinkedIn
         </a>
         <a
-          className="flex items-center"
+          className="flex items-center hover:text-[#70FF00]"
           href="https://github.com/ShayneJG"
           target="_blank"
         >
@@ -44,7 +50,7 @@ function Header() {
           />
           Github
         </a>
-        <div className="bg-gradient-to-t from-white to-[#70FF008C] rounded-md p-1">
+        <div className="bg-gradient-to-t from-white to-[#70FF008C] rounded-md p-1 hover:text-[#70FF00] hover:cursor-pointer hover:bg-[#70FF008C]">
           <a
             onClick={() => {
               setContact(true);
@@ -64,20 +70,26 @@ function Header() {
             action="https://formspree.io/f/mrgvlapv"
             method="POST"
             id="contact"
-            className="absolute flex flex-col border-2 rounded-lg bg-black border-[#70FF00] left-0 right-0 bottom-0 top-20 mx-auto p-5 h-1/2 justify-between max-w-max	"
+            className="absolute flex flex-col border rounded-lg bg-black border-[#70FF00]/75 left-0 right-0 bottom-0 top-20 mx-auto p-5 h-1/2 justify-between max-w-max	shadow-md shadow-[#70FF00]/50"
           >
             <div>
               <label className="block mb-2">
                 Name
-                <input name="name" className="w-full text-black" type="text" />
+                <input
+                  name="name"
+                  required
+                  className="w-full text-black rounded-md"
+                  type="text"
+                />
               </label>
             </div>
             <div>
               <label className="block">
                 Email
                 <input
+                  required
                   name="email"
-                  className="w-full text-black"
+                  className="w-full text-black rounded-md"
                   type="email"
                 />
               </label>
@@ -87,7 +99,7 @@ function Header() {
                 Contact number (optional)
                 <input
                   name="number"
-                  className="w-full text-black"
+                  className="w-full text-black rounded-md"
                   type="number"
                 />
               </label>
@@ -96,8 +108,9 @@ function Header() {
               <label className="block">
                 Comments
                 <textarea
+                  required
                   name="comments"
-                  className="w-full text-black"
+                  className="w-full text-black rounded-md"
                 ></textarea>
               </label>
             </div>

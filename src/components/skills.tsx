@@ -1,7 +1,12 @@
 function Skills() {
   return (
-    <div className="bg-[#161616]">
-      <h2 id="skills">skills()</h2>
+    <div className="py-5">
+      <div className="font-bold flex mb-5">
+        <h1 id="projects" className="text-[#70FF00] pl-10 pb-5 text-2xl  ">
+          skills
+        </h1>
+        <p className="text-[#E0E0E0] text-2xl">( )</p>
+      </div>
       <div>
         <div id="left">
           <ul className="w-full flex flex-wrap justify-center">
