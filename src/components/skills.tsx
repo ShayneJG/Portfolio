@@ -4,7 +4,7 @@ function Skills() {
       <h2 id="skills">skills()</h2>
       <div>
         <div id="left">
-          <ul className="w-full flex">
+          <ul className="w-full flex flex-wrap justify-center">
             {skillArray.map((item: skills, index) => {
               return (
                 <ListCreator image={item.image} text={item.text} key={index} />
@@ -35,9 +35,9 @@ const skillArray: skills[] = [
 
 function ListCreator(item: skills) {
   return (
-    <li className="m-auto" key={item.text}>
+    <li className="m-auto w-28" key={item.text}>
       <img className="h-10 m-auto" src={item.image}></img>
-      <p className="text-white">{item.text}</p>
+      <p className="text-white text-center font-bold">{item.text}</p>
     </li>
   );
 }
