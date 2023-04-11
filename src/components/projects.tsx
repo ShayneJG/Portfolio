@@ -46,13 +46,15 @@ function Projects() {
         <p className="text-[#E0E0E0] text-2xl">( )</p>
       </div>
 
-      <AliceCarousel
-        mouseTracking
-        responsive={responsive}
-        items={projects.map((i) => {
-          return <Item details={i} key={i.description} />;
-        })}
-      />
+      <div className="flex w-4/5 mx-auto items-center h-full">
+        <AliceCarousel
+          mouseTracking
+          responsive={responsive}
+          items={projects.map((i) => {
+            return <Item details={i} key={i.description} />;
+          })}
+        />
+      </div>
     </div>
   );
 }
