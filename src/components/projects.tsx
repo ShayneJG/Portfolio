@@ -33,12 +33,12 @@ let projects: Project[] = [
 const responsive = {
   0: { items: 1 },
   568: { items: 2 },
-  1024: { items: 3 },
+  1024: { items: 3, itemsFit: "contain" },
 };
 
 function Projects() {
   return (
-    <div className="h-80 mt-10">
+    <div className="h-80 mt-10 mb-52 ">
       <div className="font-bold flex mb-5">
         <h1 id="projects" className="text-[#70FF00] pb-5 text-2xl  ">
           projects
@@ -48,6 +48,9 @@ function Projects() {
 
       <div className="flex w-4/5 mx-auto items-center h-full">
         <AliceCarousel
+          autoHeight
+          disableButtonsControls
+          autoWidth
           mouseTracking
           responsive={responsive}
           items={projects.map((i) => {
@@ -65,7 +68,7 @@ interface ItemProps {
 
 function Item({ details }: ItemProps) {
   return (
-    <div className="relative mx-4 h-44 w-72 hover:border hover:border-[#70FF00] hover:rounded-lg group ">
+    <div className="relative h-52 w-80 hover:border hover:border-[#70FF00] hover:rounded-lg group ">
       <a href={details.URL} target="_blank">
         <img
           className="rounded-lg h-full w-full group-hover:opacity-50"
