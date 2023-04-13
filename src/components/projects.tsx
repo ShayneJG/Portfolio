@@ -48,9 +48,6 @@ function Projects() {
 
       <div className="flex w-4/5 mx-auto items-center h-full">
         <AliceCarousel
-          autoHeight
-          disableButtonsControls
-          autoWidth
           mouseTracking
           responsive={responsive}
           items={projects.map((i) => {
@@ -68,7 +65,7 @@ interface ItemProps {
 
 function Item({ details }: ItemProps) {
   return (
-    <div className="relative h-52 w-80 hover:border hover:border-[#70FF00] hover:rounded-lg group ">
+    <div className="relative mx-2 rounded-lg hover:border hover:border-[#70FF00]  hover:rounded-lg group ">
       <a href={details.URL} target="_blank">
         <img
           className="rounded-lg h-full w-full group-hover:opacity-50"
@@ -79,8 +76,8 @@ function Item({ details }: ItemProps) {
           alt="popout img"
           className="hidden group-hover:block absolute top-0 left-0 right-0 bottom-0 m-auto h-1/4"
         />
-        <span className="absolute bottom-0 text-white font-bold bg-[#4C4C4CA8]/50 w-full text-center group-hover:opacity-50">
-          <p>{details.description}</p>
+        <span className="absolute bottom-0 text-white font-bold bg-[#4C4C4CA8]/50 w-full py-2 rounded-b-lg text-center group-hover:opacity-50">
+          <p className="pb-3 ">{details.description}</p>
           <div className="flex justify-between mx-5">
             {details.tools.map((tool) => {
               return <p key={tool}>{tool}</p>;

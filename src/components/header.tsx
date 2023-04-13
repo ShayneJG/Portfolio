@@ -10,24 +10,24 @@ function Header() {
       </div>
       <nav
         id="navbar"
-        className="flex justify-between w-full lg:w-1/3 lg:justify-center text-white text-lg font-bold "
+        className="flex justify-center sm:justify-between w-full lg:w-1/3 lg:justify-center text-white text-md md:text-lg font-bold "
       >
-        <a className="hover:text-[#70FF00] lg:mx-5" href="#about">
+        <a className="hover:text-[#70FF00] mx-2 lg:mx-5" href="#about">
           About
         </a>
-        <a className="hover:text-[#70FF00] lg:mx-5" href="#skills">
+        <a className="hover:text-[#70FF00] mx-2 lg:mx-5" href="#skills">
           Skills
         </a>
-        <a className="hover:text-[#70FF00] lg:mx-5" href="#projects">
+        <a className="hover:text-[#70FF00] mx-2 lg:mx-5" href="#projects">
           Projects
         </a>
       </nav>
       <div
         id="socials"
-        className="flex w-full lg:w-1/3 justify-between lg:justify-end text-white text-lg font-bold flex-wrap  items-center "
+        className="flex w-full lg:w-1/3 justify-center sm:justify-between lg:justify-end text-white text-md md:text-lg font-bold flex-wrap  items-center "
       >
         <a
-          className="flex items-center hover:text-[#70FF00] lg:mx-5"
+          className="flex items-center hover:text-[#70FF00] mx-2 lg:mx-5"
           href="https://www.linkedin.com/in/shayne-geilman-b0731a96/"
           target="_blank"
         >
@@ -39,7 +39,7 @@ function Header() {
           LinkedIn
         </a>
         <a
-          className="flex items-center hover:text-[#70FF00] lg:mx-5"
+          className="flex items-center hover:text-[#70FF00] mx-2 lg:mx-5"
           href="https://github.com/ShayneJG"
           target="_blank"
         >
