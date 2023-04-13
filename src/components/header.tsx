@@ -3,43 +3,43 @@ import { useState } from "react";
 function Header() {
   const [contact, setContact] = useState<boolean>(false);
   return (
-    <div className="flex items-center flex-col">
-      <div className="flex">
-        <h1 className="text-lg text-[#828282] font-bold">SHAYNE </h1>
-        <h1 className="text-lg text-[#F2F2F2] font-bold">GEILMAN</h1>
+    <div className="flex items-center flex-col mt-3 lg:flex-row lg:justify-between">
+      <div className="flex font-bold text-lg  lg:text-4xl lg:w-1/3">
+        <h1 className=" text-[#828282] ">SHAYNE </h1>
+        <h1 className="text-[#F2F2F2] ">GEILMAN</h1>
       </div>
       <nav
         id="navbar"
-        className="flex w-full px-5 justify-between text-white text-lg font-bold "
+        className="flex justify-between w-full lg:w-1/3 lg:justify-center text-white text-lg font-bold "
       >
-        <a className="hover:text-[#70FF00]" href="#about">
+        <a className="hover:text-[#70FF00] lg:mx-5" href="#about">
           About
         </a>
-        <a className="hover:text-[#70FF00]" href="#skills">
+        <a className="hover:text-[#70FF00] lg:mx-5" href="#skills">
           Skills
         </a>
-        <a className="hover:text-[#70FF00]" href="#projects">
+        <a className="hover:text-[#70FF00] lg:mx-5" href="#projects">
           Projects
         </a>
       </nav>
       <div
         id="socials"
-        className="flex w-full px-5 mt-3 justify-between text-white text-lg font-bold flex-wrap  items-center "
+        className="flex w-full lg:w-1/3 justify-between lg:justify-end text-white text-lg font-bold flex-wrap  items-center "
       >
         <a
-          className="flex items-center hover:text-[#70FF00]"
+          className="flex items-center hover:text-[#70FF00] lg:mx-5"
           href="https://www.linkedin.com/in/shayne-geilman-b0731a96/"
           target="_blank"
         >
           <img
-            className="h-4 pr-1 hover:text-[#70FF00]"
+            className="h-4 pr-1 "
             src="src/assets/linkedIn.png"
             alt="linkedinlogo"
           />
           LinkedIn
         </a>
         <a
-          className="flex items-center hover:text-[#70FF00]"
+          className="flex items-center hover:text-[#70FF00] lg:mx-5"
           href="https://github.com/ShayneJG"
           target="_blank"
         >
