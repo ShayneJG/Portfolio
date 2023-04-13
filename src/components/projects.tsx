@@ -40,7 +40,7 @@ function Projects() {
   return (
     <div className="h-80 mt-10">
       <div className="font-bold flex mb-5">
-        <h1 id="projects" className="text-[#70FF00] pl-10 pb-5 text-2xl  ">
+        <h1 id="projects" className="text-[#70FF00] pb-5 text-2xl  ">
           projects
         </h1>
         <p className="text-[#E0E0E0] text-2xl">( )</p>

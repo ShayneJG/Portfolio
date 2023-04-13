@@ -3,7 +3,7 @@ function Introduction() {
     <div className="w-full mx-auto my-10 flex flex-col justify-center items-center font-bold text-center">
       <div className="text-[#E0E0E0]">
         <p>Hello, I am</p>
-        <div className="text-[#70FF00] my-10 text-3xl  tracking-widest leading-10">
+        <div className="text-[#70FF00] my-20  text-3xl  tracking-widest leading-10">
           <h1>&lt; Shayne</h1>
           <h1>Geilman /&gt;</h1>
         </div>

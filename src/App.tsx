@@ -8,8 +8,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <main>
-        <Introduction />
+
+      <Introduction />
+      <main className="m-auto max-w-7xl  ">
         <Description />
         <Skills />
         <Projects />
