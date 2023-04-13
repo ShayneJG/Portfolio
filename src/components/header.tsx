@@ -70,15 +70,15 @@ function Header() {
             action="https://formspree.io/f/mrgvlapv"
             method="POST"
             id="contact"
-            className="absolute flex flex-col border rounded-lg bg-black border-[#70FF00]/75 left-0 right-0 bottom-0 top-20 mx-auto p-5 h-1/2 justify-between max-w-max	shadow-md shadow-[#70FF00]/50"
+            className="absolute flex flex-col  rounded-lg bg-black  left-0 right-0 bottom-0 top-20 mx-auto p-5 h-1/2 justify-between max-w-max	shadow-xl shadow-[#70FF00]/25"
           >
             <div>
-              <label className="block mb-2">
+              <label className="block">
                 Name
                 <input
                   name="name"
                   required
-                  className="w-full text-black rounded-md"
+                  className="w-full text-black rounded-md pl-2"
                   type="text"
                 />
               </label>
@@ -89,7 +89,7 @@ function Header() {
                 <input
                   required
                   name="email"
-                  className="w-full text-black rounded-md"
+                  className="w-full text-black rounded-md pl-2"
                   type="email"
                 />
               </label>
@@ -99,7 +99,7 @@ function Header() {
                 Contact number (optional)
                 <input
                   name="number"
-                  className="w-full text-black rounded-md"
+                  className="w-full text-black rounded-md pl-2"
                   type="number"
                 />
               </label>
@@ -110,7 +110,7 @@ function Header() {
                 <textarea
                   required
                   name="comments"
-                  className="w-full text-black rounded-md"
+                  className="w-full text-black rounded-md pl-2"
                 ></textarea>
               </label>
             </div>
