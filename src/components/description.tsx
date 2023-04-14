@@ -14,13 +14,13 @@ function Description() {
           development. My coding journey began with Visual Basic in highschool
           through to Java at TAFE. After a brief tangent in the publishing and
           editing industry, I am eager to make a career shift into web
-          development. I started out by following the curriculum on
-          FreeCodeCamp, and after finishing their class-based React course, I
-          chose to independently teach myself the functional approach to React
-          to stay current. Since then, I have built out a 'manuscript
-          management' app that helps with my work in publishing and editing,
-          learnt Typescript, honed my skills with css frameworks such as
-          Tailwind, and learnt to apply professional designs using Figma.
+          development. I completed the HTML, CSS, Javascript, and React modules,
+          respectively, from FreeCodeCamp. From there, I learnt Typescript
+          independently and began to practice React using functional components
+          and hooks by building projects from Frontendmentor by following their
+          respective Figma designs. Currently, I am working on a 'manuscript
+          management' app that helps in my current publishing and editing work
+          (code available on request).
         </p>
       </div>
       <div>
