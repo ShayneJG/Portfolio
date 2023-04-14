@@ -1,7 +1,9 @@
-import { useState } from "react";
+interface HeaderProps {
+  contact: boolean;
+  setContact: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-function Header() {
-  const [contact, setContact] = useState<boolean>(false);
+function Header({ contact, setContact }: HeaderProps): JSX.Element {
   return (
     <div className="flex items-center flex-col mt-3 lg:flex-row lg:justify-between">
       <div className="flex font-bold text-lg  lg:text-4xl lg:w-1/3">
@@ -70,7 +72,7 @@ function Header() {
             action="https://formspree.io/f/mrgvlapv"
             method="POST"
             id="contact"
-            className="absolute font-normal flex flex-col bg-stone-900  left-0 right-0  top-1/3 mx-auto px-5 py-2 w-full md:w-1/2  shadow-xl shadow-[#70FF00]/25"
+            className="absolute  filter-none font-normal flex flex-col bg-stone-900  left-0 right-0  top-1/3 mx-auto px-5 py-2 w-full md:w-1/2  shadow-xl shadow-[#70FF00]/25"
           >
             <h1 className="text-center font-bold text-3xl py-2">Contact</h1>
             <div className="flex flex-col lg:flex-row justify-between">
