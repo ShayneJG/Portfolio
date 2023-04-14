@@ -70,53 +70,64 @@ function Header() {
             action="https://formspree.io/f/mrgvlapv"
             method="POST"
             id="contact"
-            className="absolute flex flex-col  rounded-lg bg-black  left-0 right-0 bottom-0 top-20 mx-auto p-5 h-1/2 justify-between max-w-max	shadow-xl shadow-[#70FF00]/25"
+            className="absolute font-normal flex flex-col bg-stone-900  left-0 right-0  top-1/3 mx-auto px-5 py-2 w-full md:w-1/2  shadow-xl shadow-[#70FF00]/25"
           >
-            <div>
-              <label className="block">
-                Name
+            <h1 className="text-center font-bold text-3xl py-2">Contact</h1>
+            <div className="flex flex-col lg:flex-row justify-between">
+              <div className="w-full my-3 mr-1 ">
+                <label htmlFor="name" className="sr-only">
+                  Name
+                </label>
                 <input
+                  id="name"
+                  placeholder="Name"
                   name="name"
                   required
-                  className="w-full text-black rounded-md pl-2"
+                  className="w-full h-8 placeholder:text-white/75 bg-[#333333] text-white rounded-sm pl-2"
                   type="text"
                 />
-              </label>
-            </div>
-            <div>
-              <label className="block">
-                Email
+              </div>
+              <div className="w-full my-3 mr-1">
+                <label htmlFor="email" className="sr-only">
+                  Email
+                </label>
+
                 <input
+                  placeholder="Email address"
+                  id="email"
                   required
                   name="email"
-                  className="w-full text-black rounded-md pl-2"
+                  className="w-full  placeholder:text-white/75 h-8 bg-[#333333] text-white rounded-sm pl-2"
                   type="email"
                 />
-              </label>
-            </div>
-            <div>
-              <label className="block">
-                Contact number (optional)
+              </div>
+              <div className="w-full my-3">
+                <label htmlFor="number" className="sr-only">
+                  Contact number optional
+                </label>
                 <input
+                  placeholder=" number (optional)"
+                  id="number"
                   name="number"
-                  className="w-full text-black rounded-md pl-2"
-                  type="number"
+                  className="w-full  placeholder:text-white/75 h-8 bg-[#333333] text-white rounded-sm pl-2"
                 />
-              </label>
+              </div>
             </div>
-            <div>
-              <label className="block">
+            <div className="">
+              <label htmlFor="comments" className="sr-only">
                 Comments
-                <textarea
-                  required
-                  name="comments"
-                  className="w-full text-black rounded-md pl-2"
-                ></textarea>
               </label>
+              <textarea
+                placeholder="Please leave me a message and I will get back to you :)"
+                id="comments"
+                required
+                name="comments"
+                className="w-full h-52 lg:h-96 block placeholder:text-white/75 bg-[#333333] text-white rounded-sm pl-2"
+              ></textarea>
             </div>
-            <div className="flex justify-between mx-20">
+            <div className="flex justify-between my-5 mx-20">
               <button
-                className="m-3 border rounded-md bg-slate-700 p-2"
+                className="m-3 border rounded-sm w-1/2 bg-slate-700 p-2"
                 onClick={() => {
                   setContact(false);
                 }}
@@ -124,7 +135,7 @@ function Header() {
                 Cancel
               </button>
               <button
-                className="m-3 border rounded-md bg-slate-700 p-2"
+                className="m-3 border rounded-sm w-1/2 bg-slate-700 p-2"
                 type="submit"
               >
                 Submit
