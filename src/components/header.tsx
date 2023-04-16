@@ -35,7 +35,7 @@ function Header({ contact, setContact }: HeaderProps): JSX.Element {
         >
           <img
             className="h-4 pr-1 "
-            src="src/assets/linkedIn.png"
+            src="assets/linkedIn.png"
             alt="linkedinlogo"
           />
           LinkedIn
@@ -45,11 +45,7 @@ function Header({ contact, setContact }: HeaderProps): JSX.Element {
           href="https://github.com/ShayneJG"
           target="_blank"
         >
-          <img
-            className="h-4 pr-1"
-            src="src/assets/github.png"
-            alt="githublogo"
-          />
+          <img className="h-4 pr-1" src="assets/github.png" alt="githublogo" />
           Github
         </a>
         <div className="bg-gradient-to-t from-white to-[#70FF008C] rounded-md p-1 hover:text-[#70FF00] hover:cursor-pointer hover:bg-[#70FF008C]">
@@ -61,7 +57,7 @@ function Header({ contact, setContact }: HeaderProps): JSX.Element {
           >
             <img
               className="h-3 pr-1"
-              src="src/assets/contact.png"
+              src="assets/contact.png"
               alt="contactmelogo"
             />
             Contact me

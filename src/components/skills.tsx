@@ -28,14 +28,14 @@ type skills = {
 };
 
 const skillArray: skills[] = [
-  { image: "src/assets/javascript logo.png", text: "Javascript" },
-  { image: "src/assets/typescript-original 2.png", text: "Typescript" },
-  { image: "src/assets/HTML5_Badge_64.png", text: "HTML" },
-  { image: "src/assets/css logo.png", text: "CSS" },
-  { image: "src/assets/react logo.png", text: "React" },
-  { image: "src/assets/mongo logo.png", text: "MongoDB" },
-  { image: "src/assets/node logo.png", text: "NodeJS" },
-  { image: "src/assets/python-original 1.png", text: "Python" },
+  { image: "assets/javascript logo.png", text: "Javascript" },
+  { image: "assets/typescript-original 2.png", text: "Typescript" },
+  { image: "assets/HTML5_Badge_64.png", text: "HTML" },
+  { image: "assets/css logo.png", text: "CSS" },
+  { image: "assets/react logo.png", text: "React" },
+  { image: "assets/mongo logo.png", text: "MongoDB" },
+  { image: "assets/node logo.png", text: "NodeJS" },
+  { image: "assets/python-original 1.png", text: "Python" },
 ];
 
 function ListCreator(item: skills) {

@@ -9,21 +9,19 @@ type Project = {
 };
 let projects: Project[] = [
   {
-    image: "src/assets/shaynejg.github.io_Dictionary-App-TS-React_.png",
+    image: "assets/shaynejg.github.io_Dictionary-App-TS-React_.png",
     URL: "https://github.com/ShayneJG/Dictionary-App-TS-React",
     description: "Dictionary App",
     tools: ["TS", "React", "Tailwind"],
   },
   {
-    image:
-      "src/assets/shaynejg.github.io_Interactive-card-details-form-React_.png",
+    image: "assets/shaynejg.github.io_Interactive-card-details-form-React_.png",
     URL: "https://github.com/ShayneJG/Interactive-card-details-form-React",
     description: "Credit Card Form",
     tools: ["JS", "React", "Tailwind"],
   },
   {
-    image:
-      "src/assets/shaynejg.github.io_Interactive-Rating-Component-React_.png",
+    image: "assets/shaynejg.github.io_Interactive-Rating-Component-React_.png",
     URL: "https://github.com/ShayneJG/Interactive-Rating-Component-React",
     description: "Rating Component",
     tools: ["JS", "CSS", "React"],
@@ -72,7 +70,7 @@ function Item({ details }: ItemProps) {
           src={details.image}
         />
         <img
-          src="src/assets/open-in-new 1.png"
+          src="assets/open-in-new 1.png"
           alt="popout img"
           className="hidden group-hover:block absolute top-0 left-0 right-0 bottom-0 m-auto h-1/4"
         />
