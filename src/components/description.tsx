@@ -10,17 +10,18 @@ function Description() {
         </div>
 
         <p className="text-[#F2F2F2] font-normal text-sm leading-8 ">
-          I am a self-taught developer eager to get started with a career in web
+          I am a self-taught developer eager to jumpstart my career in web
           development. My coding journey began with Visual Basic in highschool
           through to Java at TAFE. After a brief tangent in the publishing and
-          editing industry, I am eager to make a career shift into web
+          editing industry, I am looking for a career shift into web
           development. I completed the HTML, CSS, Javascript, and React modules,
           respectively, from FreeCodeCamp. From there, I learnt Typescript
           independently and began to practice React using functional components
-          and hooks by building projects from Frontendmentor by following their
-          respective Figma designs. Currently, I am working on a 'manuscript
-          management' app that helps in my current publishing and editing work
-          (code available on request).
+          and hooks by building projects from Frontendmentor, using their
+          provided Figma designs as a guide to create functional, responsive web
+          apps. Currently, I am working on a 'manuscript management' app that
+          helps in my current publishing and editing work (code available on
+          request). I also have experience using Git and Tailwind.
         </p>
       </div>
       <div>
