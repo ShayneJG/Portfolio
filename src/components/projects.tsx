@@ -21,6 +21,12 @@ let projects: Project[] = [
     tools: ["JS", "React", "Tailwind"],
   },
   {
+    image: "assets/shaynejg.github.io_Password-generator.png",
+    URL: "https://github.com/ShayneJG/Password-generator",
+    description: "Password Generator",
+    tools: ["TS, React, Tailwind, Chakra UI"],
+  },
+  {
     image: "assets/shaynejg.github.io_Interactive-Rating-Component-React_.png",
     URL: "https://github.com/ShayneJG/Interactive-Rating-Component-React",
     description: "Rating Component",
@@ -60,13 +66,13 @@ function Projects() {
 interface ItemProps {
   details: Project;
 }
-
+// 325 216
 function Item({ details }: ItemProps) {
   return (
     <div className="relative mx-2 rounded-lg hover:border hover:border-[#70FF00]  hover:rounded-lg group ">
       <a href={details.URL} target="_blank">
         <img
-          className="rounded-lg h-full w-full group-hover:opacity-50"
+          className="rounded-lg h-[216px] w-[325px] group-hover:opacity-50"
           src={details.image}
         />
         <img
