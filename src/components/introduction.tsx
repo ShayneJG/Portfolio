@@ -3,8 +3,8 @@ function Introduction() {
     <div className="w-full mx-auto my-10 flex flex-col justify-center items-center font-bold text-center">
       <div className="text-[#E0E0E0]">
         <p>Hello, I am</p>
-        <div className="text-[#70FF00] my-20  text-3xl  tracking-widest leading-10">
-          <h1>&lt; Shayne</h1>
+        <div className="text-[#70FF00] my-20  text-5xl  tracking-widest leading-10">
+          <h1 className="pb-2">&lt; Shayne</h1>
           <h1>Geilman /&gt;</h1>
         </div>
         <p className="text-3xl my-10">Front-end Developer</p>
