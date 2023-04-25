@@ -16,7 +16,7 @@ function Introduction() {
             </div>
           </div>
           <div className="flex text-left">
-            <span className="text-5xl pr-1">3</span>
+            <span className="text-5xl pr-1">4</span>
             <div className="block font-normal uppercase">
               <p>Projects </p>
               <p>completed</p>
