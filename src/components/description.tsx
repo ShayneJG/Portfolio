@@ -9,19 +9,31 @@ function Description() {
           <p className="text-[#E0E0E0] text-2xl">( )</p>
         </div>
 
-        <p className="text-[#F2F2F2] font-normal text-sm leading-8 ">
-          I am a self-taught developer eager to jumpstart my career in web
-          development. My coding journey began with Visual Basic in highschool
-          through to Java at TAFE. After a brief tangent in the publishing and
-          editing industry, I am looking for a career shift into web
-          development. I completed the HTML, CSS, Javascript, and React modules,
-          respectively, from FreeCodeCamp. From there, I learnt Typescript
-          independently and began to practice React using functional components
-          and hooks by building projects from Frontendmentor, using their
-          provided Figma designs as a guide to create functional, responsive web
-          apps. Currently, I am working on a 'manuscript management' app that
-          helps in my current publishing and editing work (code available on
-          request). I also have experience using Git and Tailwind.
+        <p className="text-[#F2F2F2] font-normal lg:font-medium text-sm lg:text-base leading-8 ">
+          As a highly motivated and self-taught developer, I am enthusiastic
+          about to start my career in web development. My journey in programming
+          began with Visual Basic in high school, followed by Java studies at
+          TAFE. After a brief but valuable tangent in the publishing and editing
+          industry, I am keen to pivot my career towards web development. I have
+          completed rigorous coursework in HTML, CSS, Javascript, and React
+          through FreeCodeCamp. I have independently acquired proficiency in
+          Typescript, and have honed my skills in React by keeping up-to-date
+          with functional components and hooks. To refine my skills, I have
+          undertaken various projects from Frontendmentor, leveraging their
+          Figma designs to create responsive, functional web applications.
+          Currently, I am actively engaged in developing a manuscript management
+          application that streamlines publishing and editing workflows, with
+          the code available upon request. Furthermore, I possess proficiency in
+          Git for version control and Tailwind for styling and layout.I am a
+          highly motivated web developer with a passion for learning and taking
+          on new challenges. While I am confident in my ability to bring value
+          to any team or project, I am also eager to learn from experienced
+          professionals in the field. My curiosity and enthusiasm for web
+          development drive me to stay up-to-date with the latest industry
+          trends and seek out opportunities to expand my knowledge and skills. I
+          believe that a willingness to learn is essential to staying relevant
+          and excelling in this fast-paced field, and I am excited to tackle new
+          challenges and grow as a developer.
         </p>
       </div>
       <div>
