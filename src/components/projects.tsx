@@ -24,7 +24,7 @@ let projects: Project[] = [
     image: "assets/shaynejg.github.io_Password-generator.png",
     URL: "https://github.com/ShayneJG/Password-generator",
     description: "Password Generator",
-    tools: ["TS, React, Tailwind, Chakra UI"],
+    tools: ["TS", "React", "Tailwind", "Chakra UI"],
   },
   {
     image: "assets/shaynejg.github.io_Interactive-Rating-Component-React_.png",
