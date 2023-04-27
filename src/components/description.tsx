@@ -24,7 +24,7 @@ function Description() {
           Currently, I am actively engaged in developing a manuscript management
           application that streamlines publishing and editing workflows, with
           the code available upon request. Furthermore, I possess proficiency in
-          Git for version control and Tailwind for styling and layout.I am a
+          Git for version control and Tailwind for styling and layout. I am a
           highly motivated web developer with a passion for learning and taking
           on new challenges. While I am confident in my ability to bring value
           to any team or project, I am also eager to learn from experienced
