@@ -11,10 +11,10 @@ function Description() {
 
         <p className="text-[#F2F2F2] font-normal lg:font-medium text-sm lg:text-base leading-8 ">
           As a highly motivated and self-taught developer, I am enthusiastic
-          about to start my career in web development. My journey in programming
-          began with Visual Basic in high school, followed by Java studies at
+          about starting my career in web development. My journey in programming
+          began with Visual Basic in high school, followed by a short object-oriented course at
           TAFE. After a brief but valuable tangent in the publishing and editing
-          industry, I am keen to pivot my career towards web development. I have
+          industry, I am keen to start making my mark on the web-development industry. I have
           completed rigorous coursework in HTML, CSS, Javascript, and React
           through FreeCodeCamp. I have independently acquired proficiency in
           Typescript, and have honed my skills in React by keeping up-to-date
@@ -22,8 +22,7 @@ function Description() {
           undertaken various projects from Frontendmentor, leveraging their
           Figma designs to create responsive, functional web applications.
           Currently, I am actively engaged in developing a manuscript management
-          application that streamlines publishing and editing workflows, with
-          the code available upon request. Furthermore, I possess proficiency in
+          application that streamlines publishing and editing workflows. I am experienced in using
           Git for version control and Tailwind for styling and layout. I am a
           highly motivated web developer with a passion for learning and taking
           on new challenges. While I am confident in my ability to bring value
