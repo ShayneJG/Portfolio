@@ -9,6 +9,12 @@ type Project = {
 };
 let projects: Project[] = [
   {
+    image: "assets/shaynejg.github.io_Manuscript_Manager.png",
+    URL: "https://github.com/ShayneJG/Manuscript-Manager",
+    description: "WIP: Manuscript Manager",
+    tools: ["Next.js", "TS", "MongoDB"],
+  },
+  {
     image: "assets/shaynejg.github.io_Dictionary-App-TS-React_.png",
     URL: "https://github.com/ShayneJG/Dictionary-App-TS-React",
     description: "Dictionary App",
