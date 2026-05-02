@@ -155,7 +155,7 @@ Note: Manuscript Manager appears as an entry on the `/work` index (and the home-
 | H2 (section heading) | Spectral | 500 | 28 / 24 | 1.2 |
 | H3 (sub-section, project title) | Spectral | 600 | 22 / 20 | 1.25 |
 | Body (main content) | Spectral | 400 | 19 / 17 | 1.55 |
-| Body italic (taglines, asides) | Spectral | 300 italic | 19 / 17 | 1.55 |
+| Body italic (taglines, asides) | Spectral | 400 italic | 19 / 17 | 1.55 |
 | Body small (secondary) | Spectral | 400 | 16 / 15 | 1.5 |
 | Meta / labels | Inter | 500 | 11 | 1.4 |
 | Nav | Inter | 500 | 12 | 1.4 |
@@ -171,7 +171,7 @@ Three font families (Spectral, Inter, IBM Plex Mono), self-hosted via `@fontsour
 | `--cream-soft` | `#ebe2cb` | Footer background, surface contrast |
 | `--ink` | `#1c1a17` | Primary text |
 | `--ink-soft` | `#3a352e` | Secondary text |
-| `--ink-muted` | `#8a7d62` | Labels, meta, captions |
+| `--ink-muted` | `#6e6147` | Labels, meta, captions |
 | `--rule` | `#c5b89a` | Separator lines, borders |
 | `--accent` | `#7a2820` | Links, rare emphasis |
 | `--accent-hover` | `#9c3a2a` | Link hover / focus |
@@ -206,8 +206,10 @@ These are the small details that make the visual language feel intentional rathe
 
 ### Accessibility baselines
 
-- Body text contrast: ink on cream = 14.6:1 (AAA)
-- Accent links: ink-red on cream = 7.4:1 (AAA)
+- Body text contrast: `--ink` on `--cream` = 14.8:1 (AAA)
+- Italic taglines: `--ink-soft` on `--cream` = 10.3:1 (AAA)
+- Labels / meta: `--ink-muted` on `--cream` = 5.2:1 (AA)
+- Accent links: `--accent` on `--cream` = 8.3:1 (AAA)
 - Focus rings on all interactive elements (1 px solid accent, 2 px offset)
 - `prefers-reduced-motion` respected (trivial since we're not animating much)
 - Semantic HTML throughout

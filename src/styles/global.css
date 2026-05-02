@@ -1,7 +1,6 @@
 /* Self-hosted fonts via @fontsource */
-@import "@fontsource/spectral/300.css";
-@import "@fontsource/spectral/300-italic.css";
 @import "@fontsource/spectral/400.css";
+@import "@fontsource/spectral/400-italic.css";
 @import "@fontsource/spectral/500.css";
 @import "@fontsource/spectral/600.css";
 @import "@fontsource/inter/400.css";
@@ -55,7 +54,7 @@ h6 {
   --cream-soft: #ebe2cb;
   --ink: #1c1a17;
   --ink-soft: #3a352e;
-  --ink-muted: #8a7d62;
+  --ink-muted: #6e6147;
   --rule: #c5b89a;
   --accent: #7a2820;
   --accent-hover: #9c3a2a;
@@ -167,7 +166,7 @@ h3 {
 /* Italics — taglines, asides */
 .tag {
   font-family: var(--font-serif);
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   font-size: 17px;
   line-height: 1.55;
@@ -297,7 +296,7 @@ code:not(pre code) {
 blockquote {
   font-family: var(--font-serif);
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 19px;
   line-height: 1.5;
   margin: var(--space-l) 0;
