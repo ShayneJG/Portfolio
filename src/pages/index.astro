@@ -5,8 +5,8 @@ import { withBase } from "../lib/url";
 
 <Layout title="Shayne Geilman" pageType="home">
   <section class="hero content">
-    <h1>Shayne Geilman</h1>
-    <p class="tag">
+    <h1 class="hero-name">Shayne Geilman</h1>
+    <p class="hero-tag tag">
       Engineer working in production data and LLM systems. Background in
       research editing and philosophy. Based in Perth.
     </p>
@@ -56,6 +56,49 @@ import { withBase } from "../lib/url";
   .hero {
     padding: var(--space-2xl) 0 var(--space-xl);
   }
+
+  /* Hero name animates from "header wordmark" position/size into final
+     hero position. Approximates the wordmark growing into the H1. */
+  .hero-name {
+    display: inline-block;
+    transform-origin: top left;
+    animation: wordmark-to-hero 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  /* Tag fades in after the name lands. */
+  .hero-tag {
+    animation: tag-fade-in 400ms ease-out 500ms both;
+  }
+
+  @keyframes wordmark-to-hero {
+    0% {
+      opacity: 0.85;
+      transform: translateY(-72px) scale(0.4);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes tag-fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-name,
+    .hero-tag {
+      animation: none;
+    }
+  }
+
   .placeholder {
     color: var(--ink-muted);
     font-style: italic;
