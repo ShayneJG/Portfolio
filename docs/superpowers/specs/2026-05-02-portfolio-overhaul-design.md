@@ -224,10 +224,10 @@ These are the small details that make the visual language feel intentional rathe
 
 ──────────────────────────────────────────────
 HERO
-   Engineer in production data and       (Spectral 500, 32px / 44px,
-   LLM systems —                           ink, line 1.1–1.15,
-   background in research editing          720px max width — the H1
-   and philosophy.                         of the home page)
+   Production data and LLM systems.       (Spectral 500, 22px / 26px,
+   Research editing and philosophy         ink, line 1.35–1.4,
+   in a former life.                       720px max width — the H1
+                                           of the home page)
 ──────────────────────────────────────────────
 
 [FEATURED]

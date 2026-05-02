@@ -6,8 +6,8 @@ import { withBase } from "../lib/url";
 <Layout title="Shayne Geilman" pageType="home">
   <section class="hero content">
     <h1 class="hero-lead">
-      Engineer in production data and LLM systems —<br />
-      background in research editing and philosophy.
+      Production data and LLM systems. Research editing and philosophy
+      in a former life.
     </h1>
   </section>
 
@@ -56,22 +56,21 @@ import { withBase } from "../lib/url";
     padding: var(--space-3xl) 0 var(--space-2xl);
   }
 
-  /* The home page hero is the positioning sentence — set in display
-     type. Replaces the previous "Shayne Geilman" H1, since the
-     wordmark in the header already answers "who is this person?". */
+  /* The home page hero is the positioning sentence as H1. The
+     wordmark in the header answers "who"; the hero answers "what",
+     compactly enough to hand the page off to FEATURED below. */
   .hero-lead {
     font-family: var(--font-serif);
     font-weight: 500;
-    font-size: 32px;
-    line-height: 1.15;
-    letter-spacing: -0.01em;
+    font-size: 22px;
+    line-height: 1.4;
     color: var(--ink);
     max-width: var(--content-width);
   }
   @media (min-width: 768px) {
     .hero-lead {
-      font-size: 44px;
-      line-height: 1.1;
+      font-size: 26px;
+      line-height: 1.35;
     }
   }
 
