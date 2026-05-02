@@ -131,10 +131,11 @@ Note: Manuscript Manager appears as an entry on the `/work` index (and the home-
 
 ### Header (every page)
 
-- Left: `Shayne Geilman` (Inter 500, small caps, links to `/`)
-- Right: `About · Work · Writing` (Inter 500, uppercase, letterspaced)
+- Left: `About · Work · Writing` nav (Inter 500, uppercase, letterspaced)
+- Right: `Shayne Geilman` wordmark (Inter 500, small caps, links to `/`)
 - Active route gets an underline / em-dash prefix
 - No logo mark — name as wordmark
+- Wordmark sits on every page, including home — see hero treatment below for why this no longer duplicates the home page heading
 
 ### Footer (every page)
 
@@ -219,15 +220,14 @@ These are the small details that make the visual language feel intentional rathe
 ### `/` — Home (Editorial Lead)
 
 ```
-[ Header ]
+[ Header — nav left, wordmark right ]
 
 ──────────────────────────────────────────────
 HERO
-   Shayne Geilman                        (Spectral 500, 42px, ink)
-   Engineer working in production data   (Spectral 300 italic, 19px,
-   and LLM systems. Background in         ink-soft, 720px max width)
-   research editing and philosophy.
-   Based in Perth.
+   Engineer in production data and       (Spectral 500, 32px / 44px,
+   LLM systems —                           ink, line 1.1–1.15,
+   background in research editing          720px max width — the H1
+   and philosophy.                         of the home page)
 ──────────────────────────────────────────────
 
 [FEATURED]
