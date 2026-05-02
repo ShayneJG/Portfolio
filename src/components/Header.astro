@@ -14,8 +14,14 @@ const items: { label: string; href: string; key: string }[] = [
 ---
 
 <header class="site-header">
-  <div class="page header-inner">
-    <a class="wordmark" href={withBase("/")}>Shayne Geilman</a>
+  <div class:list={["page", "header-inner", { home: pageType === "home" }]}>
+    {
+      pageType !== "home" && (
+        <a class="wordmark" href={withBase("/")}>
+          Shayne Geilman
+        </a>
+      )
+    }
     <nav>
       {
         items.map((item) => (
@@ -41,6 +47,9 @@ const items: { label: string; href: string; key: string }[] = [
     align-items: center;
     justify-content: space-between;
     gap: var(--space-l);
+  }
+  .header-inner.home {
+    justify-content: flex-end;
   }
   .wordmark {
     font-family: var(--font-sans);
