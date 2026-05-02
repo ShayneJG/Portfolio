@@ -1,0 +1,79 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { withBase } from "../../lib/url";
+import { getCollection } from "astro:content";
+
+const work = await getCollection("work");
+const sorted = work.sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout title="Work" pageType="work">
+  <section class="content work-section">
+    <h1 class="display">Work</h1>
+    <p class="tag">Selected case studies and personal projects.</p>
+
+    {
+      sorted.length === 0 ? (
+        <p class="placeholder">Case studies coming soon.</p>
+      ) : (
+        <ul class="work-list">
+          {sorted.map((entry) => (
+            <li class="work-item">
+              <h3>
+                <a href={withBase(`/work/${entry.id}`)}>{entry.data.title}</a>
+              </h3>
+              <p>{entry.data.subtitle}</p>
+              <span class="meta">
+                {entry.data.stack.join(" — ")} — {entry.data.date}
+              </span>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </section>
+</Layout>
+
+<style>
+  .work-section {
+    padding: var(--space-2xl) 0;
+  }
+  .display {
+    margin-bottom: var(--space-m);
+  }
+  .tag {
+    margin-bottom: var(--space-2xl);
+  }
+  .placeholder {
+    color: var(--ink-muted);
+    font-style: italic;
+    font-size: 17px;
+  }
+  .work-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .work-item {
+    padding: var(--space-l) 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .work-item:last-child {
+    border-bottom: none;
+  }
+  .work-item h3 {
+    margin-bottom: var(--space-xs);
+  }
+  .work-item h3 a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .work-item h3 a:hover {
+    color: var(--accent);
+  }
+  .work-item p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: var(--space-xs);
+  }
+</style>

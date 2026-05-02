@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About" pageType="about">
+  <section class="content about-section">
+    <h1 class="display">About</h1>
+    <p class="placeholder">
+      The polymath narrative — Philosophy BA, 2,000 manuscripts edited at MDPI,
+      Postgrad IT, current data and LLM work — will live here.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .about-section {
+    padding: var(--space-2xl) 0;
+  }
+  .display {
+    margin-bottom: var(--space-xl);
+  }
+  .placeholder {
+    color: var(--ink-muted);
+    font-style: italic;
+    font-size: 17px;
+    max-width: var(--content-width);
+  }
+</style>

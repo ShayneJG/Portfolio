@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { withBase } from "../lib/url";
+---
+
+<Layout title="Not found">
+  <section class="content notfound">
+    <h1 class="display">This page is missing.</h1>
+    <p class="tag">Try the work, the writing, or the front page.</p>
+    <ul class="links">
+      <li><a href={withBase("/work")}>Work</a></li>
+      <li><a href={withBase("/writing")}>Writing</a></li>
+      <li><a href={withBase("/")}>Home</a></li>
+    </ul>
+  </section>
+</Layout>
+
+<style>
+  .notfound {
+    padding: var(--space-3xl) 0;
+  }
+  .display {
+    margin-bottom: var(--space-m);
+  }
+  .tag {
+    margin-bottom: var(--space-xl);
+  }
+  .links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+  }
+  .links a {
+    font-family: var(--font-serif);
+    font-size: 19px;
+  }
+</style>

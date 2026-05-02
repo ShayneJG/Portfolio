@@ -1,0 +1,86 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { withBase } from "../../lib/url";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("writing");
+const sorted = posts.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString("en-AU", { year: "numeric", month: "short" });
+---
+
+<Layout title="Writing" pageType="writing">
+  <section class="content writing-section">
+    <h1 class="display">Writing</h1>
+    <p class="tag">
+      Notes on the literacies engineering needs in the LLM era — critical
+      asking, prompt design as a craft, agentic workflows, and the unexpected
+      things that carry over from research editing into engineering.
+    </p>
+
+    {
+      sorted.length === 0 ? (
+        <p class="placeholder">Posts coming soon.</p>
+      ) : (
+        <ul class="post-list">
+          {sorted.map((post) => (
+            <li class="post-item">
+              <h3>
+                <a href={withBase(`/writing/${post.id}`)}>{post.data.title}</a>
+              </h3>
+              <p>{post.data.excerpt}</p>
+              <span class="meta">{fmt(post.data.date)}</span>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </section>
+</Layout>
+
+<style>
+  .writing-section {
+    padding: var(--space-2xl) 0;
+  }
+  .display {
+    margin-bottom: var(--space-m);
+  }
+  .tag {
+    margin-bottom: var(--space-2xl);
+  }
+  .placeholder {
+    color: var(--ink-muted);
+    font-style: italic;
+    font-size: 17px;
+  }
+  .post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .post-item {
+    padding: var(--space-l) 0;
+    border-bottom: 1px dotted var(--rule);
+  }
+  .post-item:last-child {
+    border-bottom: none;
+  }
+  .post-item h3 {
+    margin-bottom: var(--space-xs);
+  }
+  .post-item h3 a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .post-item h3 a:hover {
+    color: var(--accent);
+  }
+  .post-item p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: var(--space-xs);
+  }
+</style>

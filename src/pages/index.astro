@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { withBase } from "../lib/url";
+---
+
+<Layout title="Shayne Geilman" pageType="home">
+  <section class="hero content">
+    <h1>Shayne Geilman</h1>
+    <p class="tag">
+      Engineer working in production data and LLM systems. Background in
+      research editing and philosophy. Based in Perth.
+    </p>
+  </section>
+
+  <hr class="rule" />
+
+  <section class="content">
+    <span class="label">Featured</span>
+    <p class="placeholder">
+      The featured case study will live here once the first case study is
+      written.
+    </p>
+  </section>
+
+  <hr class="rule" />
+
+  <section class="content">
+    <span class="label">More work</span>
+    <p class="placeholder">
+      The project list will live here once the case studies and personal
+      projects are added to the <code>work</code> content collection.
+    </p>
+  </section>
+
+  <hr class="rule" />
+
+  <section class="about-writing">
+    <div class="content">
+      <span class="label">About</span>
+      <p class="placeholder">
+        A short teaser of the polymath narrative will live here.{" "}
+        <a href={withBase("/about")}>More on /about →</a>
+      </p>
+    </div>
+    <div class="content">
+      <span class="label">Recent writing</span>
+      <p class="placeholder">
+        The two most recent posts will live here.{" "}
+        <a href={withBase("/writing")}>All writing →</a>
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding: var(--space-2xl) 0 var(--space-xl);
+  }
+  .placeholder {
+    color: var(--ink-muted);
+    font-style: italic;
+    font-size: 16px;
+    max-width: var(--content-width);
+  }
+  .about-writing {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    padding: var(--space-xl) 0;
+  }
+  @media (min-width: 768px) {
+    .about-writing {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3xl);
+    }
+  }
+</style>
