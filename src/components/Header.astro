@@ -15,6 +15,7 @@ const items: { label: string; href: string; key: string }[] = [
 
 <header class="site-header">
   <div class="page header-inner">
+    <a class="wordmark" href={withBase("/")}>Shayne Geilman</a>
     <nav>
       {
         items.map((item) => (
@@ -27,7 +28,6 @@ const items: { label: string; href: string; key: string }[] = [
         ))
       }
     </nav>
-    <a class="wordmark" href={withBase("/")}>Shayne Geilman</a>
   </div>
 </header>
 

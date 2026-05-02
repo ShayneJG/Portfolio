@@ -131,8 +131,8 @@ Note: Manuscript Manager appears as an entry on the `/work` index (and the home-
 
 ### Header (every page)
 
-- Left: `About · Work · Writing` nav (Inter 500, uppercase, letterspaced)
-- Right: `Shayne Geilman` wordmark (Inter 500, small caps, links to `/`)
+- Left: `Shayne Geilman` wordmark (Inter 500, small caps, links to `/`)
+- Right: `About · Work · Writing` nav (Inter 500, uppercase, letterspaced)
 - Active route gets an underline / em-dash prefix
 - No logo mark — name as wordmark
 - Wordmark sits on every page, including home — see hero treatment below for why this no longer duplicates the home page heading
@@ -220,7 +220,7 @@ These are the small details that make the visual language feel intentional rathe
 ### `/` — Home (Editorial Lead)
 
 ```
-[ Header — nav left, wordmark right ]
+[ Header — wordmark left, nav right ]
 
 ──────────────────────────────────────────────
 HERO
