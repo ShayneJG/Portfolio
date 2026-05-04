@@ -231,8 +231,8 @@ HERO
                                            as masthead, not sentence.)
 
    Engineer in production data and LLM    (.tag class — Spectral 400
-   systems, with a background in           italic, 17 / 19 px, ink-soft.
-   philosophy and research editing.        The hero dek; explains the
+   systems. Trained in philosophy,         italic, 17 / 19 px, ink-soft.
+   former research editor.                 The hero dek; explains the
                                            three-noun H1 above.)
 ──────────────────────────────────────────────
 
