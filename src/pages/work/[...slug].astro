@@ -1,0 +1,115 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { withBase } from "../../lib/url";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("work");
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Layout
+  title={entry.data.title}
+  description={entry.data.subtitle}
+  pageType="work"
+>
+  <article class="content case-study">
+    <header class="case-header">
+      <h1 class="display">{entry.data.title}</h1>
+      <p class="tag">{entry.data.subtitle}</p>
+      <p class="meta case-meta">
+        {entry.data.stack.join(" · ")} · {entry.data.date}
+      </p>
+    </header>
+
+    <div class="case-body prose">
+      <Content />
+    </div>
+
+    <footer class="case-footer">
+      <a href={withBase("/work")}>← All work</a>
+    </footer>
+  </article>
+</Layout>
+
+<style>
+  .case-study {
+    padding: var(--space-2xl) 0;
+  }
+  .case-header {
+    margin-bottom: var(--space-2xl);
+  }
+  .case-header .display {
+    margin-bottom: var(--space-m);
+  }
+  .case-header .tag {
+    margin-bottom: var(--space-l);
+  }
+  .case-meta {
+    color: var(--ink-muted);
+  }
+  .case-footer {
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-l);
+    border-top: 1px solid var(--rule);
+  }
+  .case-footer a {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: var(--ink-soft);
+  }
+  .case-footer a:hover {
+    color: var(--accent);
+  }
+
+  /* Prose styles for MDX body content */
+  .prose :global(h2) {
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-m);
+  }
+  .prose :global(h3) {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-s);
+  }
+  .prose :global(p) {
+    margin-bottom: var(--space-m);
+    max-width: var(--content-width);
+  }
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin-bottom: var(--space-m);
+    padding-left: var(--space-l);
+    max-width: var(--content-width);
+  }
+  .prose :global(li) {
+    margin-bottom: var(--space-xs);
+  }
+  .prose :global(img) {
+    margin: var(--space-l) 0;
+    border-radius: 4px;
+  }
+  .prose :global(figure) {
+    margin: var(--space-l) 0;
+  }
+  .prose :global(figcaption) {
+    font-size: 14px;
+    color: var(--ink-muted);
+    margin-top: var(--space-xs);
+    font-family: var(--font-sans);
+  }
+  .prose :global(hr) {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: var(--space-l) 0;
+    max-width: var(--content-width);
+  }
+</style>

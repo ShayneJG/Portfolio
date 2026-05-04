@@ -38,6 +38,10 @@ const fmt = (d: Date) =>
         </ul>
       )
     }
+
+    <p class="rss-link">
+      <a href={withBase("/writing/rss.xml")}>RSS feed</a>
+    </p>
   </section>
 </Layout>
 
@@ -82,5 +86,19 @@ const fmt = (d: Date) =>
     font-size: 16px;
     color: var(--ink-soft);
     margin-bottom: var(--space-xs);
+  }
+  .rss-link {
+    margin-top: var(--space-2xl);
+    font-family: var(--font-sans);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+  .rss-link a {
+    color: var(--ink-muted);
+    text-decoration: none;
+  }
+  .rss-link a:hover {
+    color: var(--accent);
+    text-decoration: underline;
   }
 </style>
