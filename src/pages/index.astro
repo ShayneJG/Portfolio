@@ -5,10 +5,7 @@ import { withBase } from "../lib/url";
 
 <Layout title="Shayne Geilman" pageType="home">
   <section class="hero content">
-    <h1 class="hero-lead">
-      Production data and LLM systems. Research editing and philosophy
-      in a former life.
-    </h1>
+    <h1 class="display">Programming, Philosophy, Research</h1>
   </section>
 
   <hr class="rule" />
@@ -53,26 +50,13 @@ import { withBase } from "../lib/url";
 
 <style>
   .hero {
-    padding: var(--space-3xl) 0 var(--space-2xl);
+    padding: var(--space-2xl) 0 var(--space-xl);
   }
 
-  /* The home page hero is the positioning sentence as H1. The
-     wordmark in the header answers "who"; the hero answers "what",
-     compactly enough to hand the page off to FEATURED below. */
-  .hero-lead {
-    font-family: var(--font-serif);
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 1.4;
-    color: var(--ink);
-    max-width: var(--content-width);
-  }
-  @media (min-width: 768px) {
-    .hero-lead {
-      font-size: 26px;
-      line-height: 1.35;
-    }
-  }
+  /* H1 uses the .display class — same treatment as subpage page
+     titles (About, Work, Writing). Three-noun title-card form keeps
+     the home H1 in the same family as the others rather than
+     drifting into hero-paragraph territory. */
 
   .placeholder {
     color: var(--ink-muted);

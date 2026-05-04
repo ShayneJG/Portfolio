@@ -224,10 +224,11 @@ These are the small details that make the visual language feel intentional rathe
 
 ──────────────────────────────────────────────
 HERO
-   Production data and LLM systems.       (Spectral 500, 22px / 26px,
-   Research editing and philosophy         ink, line 1.35–1.4,
-   in a former life.                       720px max width — the H1
-                                           of the home page)
+   Programming, Philosophy, Research      (.display class — Spectral
+                                           500, 40 px / 56 px, line 1.05.
+                                           Same treatment as subpage
+                                           H1s. Three-noun title-card
+                                           form: domains, not sentence.)
 ──────────────────────────────────────────────
 
 [FEATURED]
