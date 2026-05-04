@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { withBase } from "../lib/url";
 
 interface Props {
   title: string;
@@ -15,6 +16,14 @@ const fullTitle =
 const desc =
   description ??
   "Engineer working in production data and LLM systems. Background in research editing and philosophy. Based in Perth.";
+
+// Absolute URLs for OG / Twitter image — social platforms require
+// absolute URLs (not relative paths) for image metadata to render.
+const faviconUrl = withBase("/favicon.svg");
+const ogImagePath = withBase("/og.png");
+const ogImageAbs = Astro.site
+  ? new URL(ogImagePath, Astro.site).toString()
+  : ogImagePath;
 ---
 
 <!doctype html>
@@ -25,11 +34,17 @@ const desc =
     <meta name="description" content={desc} />
     <title>{fullTitle}</title>
     <link rel="canonical" href={Astro.url.toString()} />
+    <link rel="icon" type="image/svg+xml" href={faviconUrl} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={desc} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url.toString()} />
+    <meta property="og:image" content={ogImageAbs} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Shayne Geilman — Software, Philosophy, Research" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImageAbs} />
   </head>
   <body>
     <Header pageType={pageType} />

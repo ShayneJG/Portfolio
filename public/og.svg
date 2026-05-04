@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#f4ecdb"/>
+
+  <!-- Wordmark, top-left -->
+  <text
+    x="80"
+    y="100"
+    font-family="Inter, system-ui, sans-serif"
+    font-size="20"
+    font-weight="600"
+    fill="#1c1a17"
+    letter-spacing="2"
+  >SHAYNE GEILMAN</text>
+
+  <!-- Hero H1 -->
+  <text
+    x="80"
+    y="320"
+    font-family="Spectral, Georgia, 'Noto Serif', serif"
+    font-size="64"
+    font-weight="500"
+    fill="#1c1a17"
+    letter-spacing="-0.5"
+  >Software · Philosophy · Research</text>
+
+  <!-- Dek line 1 -->
+  <text
+    x="80"
+    y="400"
+    font-family="Spectral, Georgia, 'Noto Serif', serif"
+    font-size="32"
+    font-style="italic"
+    font-weight="400"
+    fill="#3a352e"
+  >Engineer in production data and LLM systems.</text>
+
+  <!-- Dek line 2 -->
+  <text
+    x="80"
+    y="445"
+    font-family="Spectral, Georgia, 'Noto Serif', serif"
+    font-size="32"
+    font-style="italic"
+    font-weight="400"
+    fill="#3a352e"
+  >Trained in philosophy, former research editor.</text>
+
+  <!-- Footer URL -->
+  <text
+    x="80"
+    y="560"
+    font-family="Inter, system-ui, sans-serif"
+    font-size="18"
+    fill="#6e6147"
+    letter-spacing="1"
+  >shaynejg.github.io/Portfolio</text>
+
+  <!-- Subtle rule -->
+  <line x1="80" y1="525" x2="1120" y2="525" stroke="#c5b89a" stroke-width="1"/>
+</svg>
