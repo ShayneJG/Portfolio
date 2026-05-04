@@ -6,6 +6,10 @@ import { withBase } from "../lib/url";
 <Layout title="Shayne Geilman" pageType="home">
   <section class="hero content">
     <h1 class="display">Software · Philosophy · Research</h1>
+    <p class="tag hero-dek">
+      Engineer in production data and LLM systems, with a background in
+      philosophy and research editing.
+    </p>
   </section>
 
   <hr class="rule" />
@@ -57,6 +61,12 @@ import { withBase } from "../lib/url";
      titles (About, Work, Writing). Three-noun title-card form keeps
      the home H1 in the same family as the others rather than
      drifting into hero-paragraph territory. */
+
+  /* Dek sits under the H1 — explains what the three nouns mean and
+     gives a hiring manager the positioning in one line. */
+  .hero-dek {
+    margin-top: var(--space-l);
+  }
 
   .placeholder {
     color: var(--ink-muted);
