@@ -224,11 +224,12 @@ These are the small details that make the visual language feel intentional rathe
 
 ──────────────────────────────────────────────
 HERO
-   Programming, Philosophy, Research      (.display class — Spectral
+   Software · Philosophy · Research       (.display class — Spectral
                                            500, 40 px / 56 px, line 1.05.
                                            Same treatment as subpage
                                            H1s. Three-noun title-card
-                                           form: domains, not sentence.)
+                                           form, middle-dot separator —
+                                           reads as masthead, not sentence.)
 ──────────────────────────────────────────────
 
 [FEATURED]
