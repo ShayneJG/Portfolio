@@ -11,7 +11,7 @@ interface Props {
 
 const { title, description, pageType = "default" } = Astro.props;
 const fullTitle =
-  pageType === "home" ? title : `${title} — Shayne Geilman`;
+  pageType === "home" ? title : `${title} · Shayne Geilman`;
 const desc =
   description ??
   "Engineer working in production data and LLM systems. Background in research editing and philosophy. Based in Perth.";

@@ -190,7 +190,7 @@ No dark mode in v1. Editorial palettes are designed for one mode; doing both is 
 
 These are the small details that make the visual language feel intentional rather than templated.
 
-- **Em-dash metadata** — stack chips and dates separated by ` — ` not commas (e.g. `Python — Supabase — 2025`)
+- **Middle-dot metadata** — stack chips and dates separated by ` · ` (U+00B7), not commas or em-dashes (e.g. `Python · Supabase · 2025`). Em-dashes are reserved for editorial prose and used sparingly.
 - **Italic Spectral taglines** under names and section openings
 - **Small-caps Inter labels** above section blocks (`RECENT WORK`, `WRITING`)
 - **`Read the case study →` link affordance** — underlined with `text-underline-offset: 3px`, ink-red colour
@@ -245,19 +245,19 @@ HERO
    Anthropic Batch API, and feeds a
    survivorship-bias-free point-in-time
    database.
-   Python — Supabase — Anthropic — 2025
+   Python · Supabase · Anthropic · 2025
    Read the case study →
 ──────────────────────────────────────────────
 
 [MORE WORK]
    Cross-company analytics frontend       Read →
-   Next.js — TanStack Table — 2025
+   Next.js · TanStack Table · 2025
 
    ha-dash · self-hosted home dashboard   Read →
-   React — Flask — Proxmox — 2024
+   React · Flask · Proxmox · 2024
 
    Manuscript Manager                     Source on GitHub
-   MERN — OAuth — 2023
+   MERN · OAuth · 2023
 ──────────────────────────────────────────────
 
 [ABOUT — RECENT WRITING]                 (two-column on desktop, stacked on mobile)
@@ -391,7 +391,7 @@ Combines the work captured by `norgate-data-pipeline` and `altare-pdf` into a si
 | Field | Value |
 |---|---|
 | Subtitle | A six-month build at a Perth capital management firm |
-| Stack chips | Python — Supabase — Anthropic Batch — Postgres |
+| Stack chips | Python · Supabase · Anthropic Batch · Postgres |
 | Featured | true |
 
 Beats:
@@ -410,7 +410,7 @@ Anonymised version of `resource-explorer`.
 | Field | Value |
 |---|---|
 | Subtitle | A Next.js analytics frontend over Supabase RPC for an exploration-sector dataset |
-| Stack chips | Next.js 16 — React 19 — Supabase — TanStack Table — ECharts |
+| Stack chips | Next.js 16 · React 19 · Supabase · TanStack Table · ECharts |
 | Featured | false |
 
 Beats:
@@ -429,7 +429,7 @@ Made public + cleaned up before publication (see §9 prerequisite workstream).
 | Field | Value |
 |---|---|
 | Subtitle | A wall-mounted home dashboard, designed to reduce daily mental load |
-| Stack chips | React — Flask — SQLite — Proxmox — RPi |
+| Stack chips | React · Flask · SQLite · Proxmox · RPi |
 | Featured | false |
 
 Beats:

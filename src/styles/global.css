@@ -163,7 +163,7 @@ h3 {
   }
 }
 
-/* Italics — taglines, asides */
+/* Italics: taglines, asides */
 .tag {
   font-family: var(--font-serif);
   font-weight: 400;
@@ -190,7 +190,7 @@ h3 {
   }
 }
 
-/* Meta / labels — Inter */
+/* Meta / labels: Inter */
 .meta {
   font-family: var(--font-sans);
   font-weight: 500;

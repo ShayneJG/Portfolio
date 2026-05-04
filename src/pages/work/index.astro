@@ -24,7 +24,7 @@ const sorted = work.sort((a, b) => a.data.order - b.data.order);
               </h3>
               <p>{entry.data.subtitle}</p>
               <span class="meta">
-                {entry.data.stack.join(" — ")} — {entry.data.date}
+                {entry.data.stack.join(" · ")} · {entry.data.date}
               </span>
             </li>
           ))}
