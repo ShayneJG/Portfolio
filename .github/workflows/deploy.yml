@@ -32,6 +32,11 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # Optional — set as a repo variable in Settings → Secrets and
+          # variables → Actions → Variables to enable GoatCounter analytics.
+          # Leave unset to ship without analytics.
+          PUBLIC_GOATCOUNTER_URL: ${{ vars.PUBLIC_GOATCOUNTER_URL }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

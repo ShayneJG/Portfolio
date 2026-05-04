@@ -24,6 +24,12 @@ const ogImagePath = withBase("/og.png");
 const ogImageAbs = Astro.site
   ? new URL(ogImagePath, Astro.site).toString()
   : ogImagePath;
+
+// GoatCounter analytics — only rendered if PUBLIC_GOATCOUNTER_URL is
+// set at build time (e.g. as a GitHub Actions repo variable or
+// secret). Empty by default; private forks / local dev get no
+// analytics. URL form: https://<your-subdomain>.goatcounter.com/count
+const goatcounterUrl = import.meta.env.PUBLIC_GOATCOUNTER_URL;
 ---
 
 <!doctype html>
@@ -45,6 +51,15 @@ const ogImageAbs = Astro.site
     <meta property="og:image:alt" content="Shayne Geilman — Software, Philosophy, Research" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={ogImageAbs} />
+    {
+      goatcounterUrl && (
+        <script
+          data-goatcounter={goatcounterUrl}
+          async
+          src="//gc.zgo.at/count.js"
+        />
+      )
+    }
   </head>
   <body>
     <Header pageType={pageType} />
