@@ -3,26 +3,124 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="About" pageType="about">
-  <section class="content about-section">
+  <article class="content about prose">
     <h1 class="display">About</h1>
-    <p class="placeholder">
-      The polymath narrative (Philosophy BA, 2,000 manuscripts edited at MDPI,
-      Postgrad IT, current data and LLM work) will live here.
+
+    <p>
+      I build production data and LLM systems. Right now that means working
+      at a Perth-based capital management firm, where the day-to-day is a
+      pipeline that ingests ASX market filings, runs structured extraction
+      through the Anthropic Batch API, and feeds an analytics frontend used
+      by the team for cross-company analysis. Before any of that, and what
+      makes the engineering work feel coherent rather than accidental, I
+      spent years editing research and studying philosophy.
     </p>
-  </section>
+
+    <p>
+      The first piece of the stack was philosophy. I did a BA at Murdoch
+      University, finishing in 2013. What it actually trained me to do was
+      read slowly, hold ambiguity in mind without rushing to resolve it,
+      and reason about systems where the parts and the whole have to fit
+      together. Engineering turned out to be the same skill applied to
+      different objects.
+    </p>
+
+    <p>
+      From 2018 to 2022 I worked as an English research editor at MDPI, a
+      scholarly publisher. Over four years I finalised more than two
+      thousand manuscripts across biology, chemistry, materials science,
+      and a long tail of other disciplines. The job was almost entirely
+      about clarity: figuring out what an author actually meant when their
+      sentence said something subtly different, and making the version on
+      the page match the version in their head. That turned out to be
+      excellent training for two things I do now in engineering: writing
+      prompts that say exactly what they mean, and designing structured
+      outputs that survive contact with messy real-world inputs.
+    </p>
+
+    <p>
+      Programming came back into the foreground around 2024. I'd taken a
+      Cert IV in object-oriented programming at TAFE years earlier and kept
+      it ticking over with side projects, but in 2025 I finished a
+      Postgraduate Diploma in IT (Software Engineering) at the University
+      of New England, with a GPA of 6.88. The postgrad gave me what
+      self-teaching couldn't: a formal model of how systems compose, where
+      their failure modes live, and which abstractions are load-bearing.
+    </p>
+
+    <p>
+      The current work sits at the intersection of all of this. The
+      pipeline ingests new market filings every day, classifies them,
+      extracts text from PDFs, and submits them to Claude in batches for
+      structured extraction: a few thousand documents a day, at roughly
+      half the cost of real-time inference. Underneath it sits a
+      point-in-time database that handles the awkward parts of historical
+      market data: ticker changes, delistings, sector reclassifications.
+      On top of it is a Next.js analytics frontend that lets the team scan
+      across companies, drill into individual histories, and screen
+      against custom criteria. Day to day I'm moving between Python,
+      TypeScript, Postgres functions, Anthropic batch jobs, and the
+      deployment plumbing that keeps it all running. The editing
+      background and the philosophy work show up everywhere: in how
+      prompts get drafted, how schemas get designed, how I read someone
+      else's code, and how I notice when the requirements I've been handed
+      are answering the wrong question.
+    </p>
+
+    <p>
+      The trajectory looks scattered on a CV — philosophy, then publishing,
+      then engineering — but it isn't a series of pivots. It's an
+      operating model. The thread is the same posture applied to different
+      artefacts: read carefully, ask better questions, write what you
+      actually mean, and treat ambiguity as something to design around
+      rather than push through.
+    </p>
+
+    <h2>What I work with</h2>
+
+    <p>
+      Currently building with Python, TypeScript, Next.js (App Router and
+      React Server Components), Supabase, Postgres, and the Anthropic
+      Batch API. Comfortable with React, Astro, MERN-stack apps, OAuth via
+      Next-Auth, Flask, and self-hosted infrastructure on Proxmox. The
+      honest answer to "favourite language" is that it depends on what
+      abstraction the problem is asking for.
+    </p>
+
+    <h2>How I work</h2>
+
+    <p>
+      I'd describe the practice as <em>critical asking</em>, in the same
+      way the academic version was critical thinking. The bottleneck in
+      software has shifted: it's less about what to write and more about
+      what to ask. Asking better questions of the codebase, of the data,
+      of the LLM, of the requirements, of the user, and noticing when the
+      question itself is the wrong one. That's the literacy I'm trying to
+      keep sharp, and it's most of what I write about.
+    </p>
+  </article>
 </Layout>
 
 <style>
-  .about-section {
+  .about {
     padding: var(--space-2xl) 0;
   }
   .display {
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-2xl);
   }
-  .placeholder {
-    color: var(--ink-muted);
-    font-style: italic;
-    font-size: 17px;
+
+  /* Prose styles — direct children, no :global() needed since the
+     content is inline in this Astro file rather than rendered from
+     MDX. */
+  .prose p {
+    margin-bottom: var(--space-l);
     max-width: var(--content-width);
+  }
+  .prose h2 {
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-m);
+  }
+  .prose em {
+    font-style: italic;
   }
 </style>
