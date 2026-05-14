@@ -1,5 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 const work = defineCollection({
   loader: glob({ base: './src/content/work', pattern: '**/*.{md,mdx}' }),
@@ -21,8 +22,8 @@ const sideProjects = defineCollection({
     subtitle: z.string(),
     stack: z.array(z.string()),
     date: z.string().regex(/^\d{4}-\d{2}$/, 'Date must be YYYY-MM'),
-    repo: z.string().url().optional(),
-    liveUrl: z.string().url().optional(),
+    repo: z.url().optional(),
+    liveUrl: z.url().optional(),
     status: z.enum(['active', 'maintained', 'archived']).optional(),
     featured: z.boolean().default(false),
     order: z.number(),
