@@ -1,0 +1,116 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { withBase } from "../../lib/url";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("writing");
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString("en-AU", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+---
+
+<Layout
+  title={entry.data.title}
+  description={entry.data.excerpt}
+  pageType="writing"
+>
+  <article class="content post">
+    <header class="post-header">
+      <h1 class="display">{entry.data.title}</h1>
+      <p class="meta post-meta">{fmt(entry.data.date)}</p>
+    </header>
+
+    <div class="post-body prose">
+      <Content />
+    </div>
+
+    <footer class="post-footer">
+      <a href={withBase("/writing")}>← All writing</a>
+    </footer>
+  </article>
+</Layout>
+
+<style>
+  .post {
+    padding: var(--space-2xl) 0;
+  }
+  .post-header {
+    margin-bottom: var(--space-2xl);
+  }
+  .post-header .display {
+    margin-bottom: var(--space-l);
+  }
+  .post-meta {
+    color: var(--ink-muted);
+  }
+  .post-footer {
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-l);
+    border-top: 1px solid var(--rule);
+  }
+  .post-footer a {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: var(--ink-soft);
+  }
+  .post-footer a:hover {
+    color: var(--accent);
+  }
+
+  /* Prose styles for MDX body content (mirrors /work/[slug].astro) */
+  .prose :global(h2) {
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-m);
+  }
+  .prose :global(h3) {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-s);
+  }
+  .prose :global(p) {
+    margin-bottom: var(--space-m);
+    max-width: var(--content-width);
+  }
+  .prose :global(ul),
+  .prose :global(ol) {
+    margin-bottom: var(--space-m);
+    padding-left: var(--space-l);
+    max-width: var(--content-width);
+  }
+  .prose :global(li) {
+    margin-bottom: var(--space-xs);
+  }
+  .prose :global(img) {
+    margin: var(--space-l) 0;
+    border-radius: 4px;
+  }
+  .prose :global(figure) {
+    margin: var(--space-l) 0;
+  }
+  .prose :global(figcaption) {
+    font-size: 14px;
+    color: var(--ink-muted);
+    margin-top: var(--space-xs);
+    font-family: var(--font-sans);
+  }
+  .prose :global(hr) {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: var(--space-l) 0;
+    max-width: var(--content-width);
+  }
+</style>

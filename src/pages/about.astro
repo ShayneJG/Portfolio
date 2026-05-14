@@ -1,0 +1,92 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { withBase } from "../lib/url";
+---
+
+<Layout title="About" pageType="about">
+  <article class="content about prose">
+    <h1 class="display">About</h1>
+
+    <p>
+      I'm a software engineer working in production data and LLM systems.
+      Right now I'm at a Perth capital management firm, building the
+      pipeline that ingests ASX market filings, runs structured extraction
+      through the Anthropic Batch API, and feeds the analytics frontend
+      the team uses for cross-company analysis.
+    </p>
+
+    <p>
+      I came at this sideways. I did a BA in philosophy at Murdoch in
+      2013. Reading carefully, not jumping to conclusions, and being
+      patient with ambiguity turned out to be useful for engineering,
+      though it took me a while to notice.
+    </p>
+
+    <p>
+      From 2018 to 2022 I edited research papers at MDPI, an academic
+      publisher. About two thousand manuscripts across biology, chemistry,
+      materials science, and a long tail of others. Most of the job was
+      clarity work: figuring out what an author actually meant when the
+      sentence on the page said something slightly different. That turns
+      out to be a lot like prompt engineering, and a lot like designing
+      schemas that don't break when real data shows up.
+    </p>
+
+    <p>
+      I'd done a Cert IV in object-oriented programming at TAFE earlier
+      and kept coding on the side. In 2025 I finished a Postgraduate
+      Diploma in IT (Software Engineering) at UNE, GPA 6.88. It taught me
+      the things you usually only get from formal CS: how systems are
+      designed, where they break, what's worth abstracting.
+    </p>
+
+    <p>
+      The current work pulls all of that together. The pipeline runs every
+      day, classifies the new filings, pulls text out of PDFs, and submits
+      batches to Claude for structured extraction (cheaper than real-time
+      inference, by a fair margin). A point-in-time database handles the
+      messy parts of historical market data: ticker changes, delistings,
+      sector reclassifications. A Next.js frontend on top lets the team
+      look at companies side-by-side or drill into any single history. Day
+      to day that's Python, TypeScript, Postgres, Anthropic batch jobs,
+      and whatever deployment plumbing the week needs.
+    </p>
+
+    <h2>What I work with</h2>
+
+    <p>
+      Currently working with Python, TypeScript, Next.js (App Router + React
+      Server Components), Supabase, Postgres, and the Anthropic Batch API.
+      Comfortable with React, Astro, MERN-stack apps, OAuth via Next-Auth,
+      Flask, and self-hosted infrastructure on Proxmox.
+    </p>
+
+    <h2>How I work</h2>
+
+    <p>
+      A lot of what I do is critical asking: working out what to ask of
+      the data, the codebase, the LLM, or whoever wrote the requirements,
+      instead of jumping straight to what to write. With LLMs in the loop
+      the bottleneck has shifted from writing to asking. I write about
+      that on the <a href={withBase("/writing")}>writing page</a>.
+    </p>
+  </article>
+</Layout>
+
+<style>
+  .about {
+    padding: var(--space-2xl) 0;
+  }
+  .display {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .prose p {
+    margin-bottom: var(--space-l);
+    max-width: var(--content-width);
+  }
+  .prose h2 {
+    margin-top: var(--space-2xl);
+    margin-bottom: var(--space-m);
+  }
+</style>

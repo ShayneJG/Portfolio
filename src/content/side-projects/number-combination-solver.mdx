@@ -1,0 +1,16 @@
+---
+title: Number Combination Solver
+subtitle: Find expressions that hit a target number in Beltmatic.
+stack: [Python, Streamlit]
+date: 2025-11
+repo: https://github.com/ShayneJG/number-combination-solver
+status: maintained
+featured: true
+order: 1
+---
+
+Beltmatic is a factory game where the goal is to combine small integers using `+`, `-`, `*`, `/`, and `**` to produce a target number. Working out a good expression by hand gets slow quickly: six numbers drawn from 1–25 with five operators is on the order of hundreds of millions of expression shapes. The solver takes a target, the highest integer available, the operators allowed, and the maximum number of integers per expression, and returns the shortest expressions that hit the target.
+
+Direct brute force is `O(n^k · m^(k-1))`, where `n` is the integer pool size, `k` is the expression length, and `m` is the operator count. Both `k` and `m` push the cost hard: six numbers drawn from 1–25 with all five operators enabled is in the billions of shape-and-ordering combinations. Up to four integers, the solver brute-forces every shape and runs in about a second. Above that it switches to meet-in-the-middle: split the expression into a left and a right half, generate every value each half can produce together with the expression that built it, then for each left value `L` look up `target - L`, `target / L`, and so on in the right table. That drops complexity from `O(n^k)` to roughly `O(n^(k/2))`. Several heuristics cut runtime further: expressions are normalised into a canonical key before deduplication, so `2 * 3 * 5` and `5 * 3 * 2` collapse to a single result; a per-value result cap bounds the partial-results tables in non-exhaustive mode; and search stops as soon as the shortest known solution can't be beaten by the next expression length.
+
+The same core ships behind a small CLI (`ncs.py`) and a Streamlit web app. I posted the web app to a Steam thread for the game, where 10–15 players used it. One reported a parenthesis bug: the math was right, but the printed expression dropped brackets that the operator precedence required, so a player couldn't lay out the matching Beltmatic machines from the result. That case in the formatter was rewritten. Exponentiation (`**`) was added at a user's request. A further request to add factorial was declined: factorial's growth rate is steep (10! is over 3.6 million), so most factorial-bearing subexpressions would overshoot the target long before they're worth scoring, and the existing operators were already returning solutions for the cases that came up.

@@ -1,0 +1,102 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Get in touch" pageType="contact">
+  <section class="content contact-section">
+    <h1 class="display">Get in touch</h1>
+    <p class="tag">For work enquiries, conversation, or anything else.</p>
+
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/mrgvlapv"
+      method="POST"
+    >
+      <label>
+        <span class="label">Name</span>
+        <input type="text" name="name" required autocomplete="name" />
+      </label>
+      <label>
+        <span class="label">Email</span>
+        <input type="email" name="email" required autocomplete="email" />
+      </label>
+      <label>
+        <span class="label">Message</span>
+        <textarea name="message" rows="8" required></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</Layout>
+
+<style>
+  .contact-section {
+    padding: var(--space-2xl) 0;
+  }
+  .display {
+    margin-bottom: var(--space-m);
+  }
+  .tag {
+    margin-bottom: var(--space-2xl);
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+    max-width: 520px;
+  }
+  .contact-form label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  .contact-form input {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--rule);
+    padding: var(--space-s) 0;
+    color: var(--ink);
+    transition: border-color 150ms ease-out;
+  }
+  .contact-form input:focus {
+    outline: none;
+    border-bottom-color: var(--accent);
+  }
+  .contact-form textarea {
+    font-family: var(--font-serif);
+    font-size: 17px;
+    background: transparent;
+    color: var(--ink);
+    resize: vertical;
+    border: 1px solid var(--rule);
+    padding: var(--space-m);
+    transition: border-color 150ms ease-out;
+  }
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .contact-form button {
+    align-self: flex-start;
+    margin-top: var(--space-m);
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: var(--space-s) var(--space-l);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+      background 150ms ease-out,
+      color 150ms ease-out;
+  }
+  .contact-form button:hover {
+    background: var(--accent);
+    color: var(--cream);
+  }
+</style>

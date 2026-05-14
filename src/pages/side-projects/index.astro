@@ -1,0 +1,80 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { withBase } from "../../lib/url";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("sideProjects");
+const sorted = projects.sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout title="Side projects" pageType="side-projects">
+  <section class="content projects-section">
+    <h1 class="display">Side projects</h1>
+    <p class="tag">Personal builds, tools, and experiments — not paid work.</p>
+
+    {
+      sorted.length === 0 ? (
+        <p class="placeholder">Nothing here yet.</p>
+      ) : (
+        <ul class="projects-list">
+          {sorted.map((entry) => (
+            <li class="project-item">
+              <h3>
+                <a href={withBase(`/side-projects/${entry.id}`)}>{entry.data.title}</a>
+              </h3>
+              <p>{entry.data.subtitle}</p>
+              <span class="meta">
+                {entry.data.stack.join(" · ")} · {entry.data.date}
+                {entry.data.status ? ` · ${entry.data.status}` : ""}
+              </span>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </section>
+</Layout>
+
+<style>
+  .projects-section {
+    padding: var(--space-2xl) 0;
+  }
+  .display {
+    margin-bottom: var(--space-m);
+  }
+  .tag {
+    margin-bottom: var(--space-2xl);
+  }
+  .placeholder {
+    color: var(--ink-muted);
+    font-style: italic;
+    font-size: 17px;
+  }
+  .projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .project-item {
+    padding: var(--space-l) 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .project-item:last-child {
+    border-bottom: none;
+  }
+  .project-item h3 {
+    margin-bottom: var(--space-xs);
+  }
+  .project-item h3 a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .project-item h3 a:hover {
+    color: var(--accent);
+  }
+  .project-item p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: var(--space-xs);
+  }
+</style>

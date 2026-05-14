@@ -1,0 +1,73 @@
+---
+import { withBase } from "../lib/url";
+
+interface Props {
+  pageType?: string;
+}
+const { pageType = "default" } = Astro.props;
+
+const items: { label: string; href: string; key: string }[] = [
+  { label: "About", href: "/about", key: "about" },
+  { label: "Work", href: "/work", key: "work" },
+  { label: "Side projects", href: "/side-projects", key: "side-projects" },
+  { label: "Writing", href: "/writing", key: "writing" },
+];
+---
+
+<header class="site-header">
+  <div class="page header-inner">
+    <a class="wordmark" href={withBase("/")}>Shayne Geilman</a>
+    <nav>
+      {
+        items.map((item) => (
+          <a
+            class:list={["nav-item", { active: pageType === item.key }]}
+            href={withBase(item.href)}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--rule);
+    padding: var(--space-l) 0;
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-l);
+  }
+  .wordmark {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 150ms ease-out;
+  }
+  .wordmark:hover {
+    color: var(--accent);
+  }
+  nav {
+    display: flex;
+    gap: var(--space-l);
+  }
+  @media (max-width: 540px) {
+    .header-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-s);
+    }
+    nav {
+      gap: var(--space-m);
+    }
+  }
+</style>

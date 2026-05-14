@@ -1,0 +1,57 @@
+---
+import { withBase } from "../lib/url";
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="page footer-inner">
+    <a class="get-in-touch" href={withBase("/contact")}>Get in touch →</a>
+    <div class="copy">© {year} Shayne Geilman</div>
+    <div class="links">
+      <a href="https://github.com/ShayneJG">GitHub</a>
+      <span class="sep">·</span>
+      <a href="https://www.linkedin.com/in/shayne-geilman-b0731a96/">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--cream-soft);
+    margin-top: var(--space-3xl);
+    padding: var(--space-l) 0;
+  }
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-l);
+    font-family: var(--font-sans);
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+  .footer-inner a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 150ms ease-out;
+  }
+  .footer-inner a:hover {
+    color: var(--accent);
+  }
+  .get-in-touch {
+    font-weight: 500;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+  }
+  @media (max-width: 720px) {
+    .footer-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-s);
+    }
+  }
+</style>

@@ -1,0 +1,71 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { withBase } from "../lib/url";
+
+interface Props {
+  title: string;
+  description?: string;
+  pageType?: "default" | "home" | "about" | "work" | "side-projects" | "writing" | "contact";
+}
+
+const { title, description, pageType = "default" } = Astro.props;
+const fullTitle =
+  pageType === "home" ? title : `${title} · Shayne Geilman`;
+const desc =
+  description ??
+  "Engineer working in production data and LLM systems. Background in research editing and philosophy. Based in Perth.";
+
+// Absolute URLs for OG / Twitter image — social platforms require
+// absolute URLs (not relative paths) for image metadata to render.
+const faviconUrl = withBase("/favicon.svg");
+const ogImagePath = withBase("/og.png");
+const ogImageAbs = Astro.site
+  ? new URL(ogImagePath, Astro.site).toString()
+  : ogImagePath;
+
+// GoatCounter analytics — only rendered if PUBLIC_GOATCOUNTER_URL is
+// set at build time (e.g. as a GitHub Actions repo variable or
+// secret). Empty by default; private forks / local dev get no
+// analytics. URL form: https://<your-subdomain>.goatcounter.com/count
+const goatcounterUrl = import.meta.env.PUBLIC_GOATCOUNTER_URL;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={desc} />
+    <title>{fullTitle}</title>
+    <link rel="canonical" href={Astro.url.toString()} />
+    <link rel="icon" type="image/svg+xml" href={faviconUrl} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.toString()} />
+    <meta property="og:image" content={ogImageAbs} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Shayne Geilman — Software, Philosophy, Research" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImageAbs} />
+    {
+      goatcounterUrl && (
+        <script
+          data-goatcounter={goatcounterUrl}
+          async
+          src="//gc.zgo.at/count.js"
+        />
+      )
+    }
+  </head>
+  <body>
+    <Header pageType={pageType} />
+    <main class="page">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
