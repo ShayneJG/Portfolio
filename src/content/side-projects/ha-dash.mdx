@@ -1,15 +1,15 @@
 ---
 title: ha-dash
-subtitle: A wall-mounted kitchen dashboard, built with my partner.
+subtitle: A wall-mounted kitchen dashboard, built with Emma.
 stack: [React, TypeScript, Python, Flask, Raspberry Pi]
-date: 2025-11
+date: 2026-04
 status: active
 featured: true
 order: 1
 ---
 
-A wall-mounted kitchen display my partner and I built to externalise the day-to-day mental overhead: what's for dinner, did anyone start the laundry, is it going to rain on the run later, what's on the bin schedule. We use it every day, which means every annoyance turns into an issue and every fix ships within minutes — pushing to `main` triggers GitHub Actions, the LXC pulls and restarts, the kiosk refreshes.
+A wall-mounted kitchen display Emma and I built to externalise the day-to-day mental overhead: what's for dinner, did anyone start the laundry, is it going to rain on the run later, what's on the bin schedule. We use it every day, which means every annoyance turns into an issue and every fix ships within minutes. Pushing to `main` triggers GitHub Actions, the LXC pulls and restarts, the kiosk refreshes.
 
-The frontend is React 18 + TypeScript + Tailwind on Vite, served as a static bundle. The backend is a Python Flask app that proxies to local services and stores per-list to-do state in SQLite. Both run inside a Proxmox LXC behind Nginx and Gunicorn; a Raspberry Pi in Chromium kiosk mode points at the URL and stays on the wall. The project was also a trial of agentic development workflows — most of the scaffolding came out of Claude Code, with the two of us reviewing, editing, and architecting each module ourselves.
+The frontend is React 18 + TypeScript + Tailwind on Vite, served as a static bundle. The backend is a Python Flask app that proxies to local services and stores per-list to-do state in SQLite. Both run inside a Proxmox LXC behind Nginx and Gunicorn; a Raspberry Pi in Chromium kiosk mode points at the URL and stays on the wall. The project was also a trial of agentic development workflows: most of the scaffolding came out of Claude Code, with Emma and me reviewing, editing, and architecting each module.
 
 The part that's been most fun is wiring the dashboard into other things we already run. The meal-plan module talks to a self-hosted Mealie instance and pulls today's planned meal; when a slot is unplanned it asks Mealie for three random recipes from the matching category (breakfast, lunch, dinner) so dinner doesn't become a 6pm fridge-stare. The Sonarr module shows the last episode downloaded and the next upcoming one across the libraries I track, with a five-minute TTL cache so we're not hammering the indexer. Weather pulls from the FastAPI server attached to my home weather station (a separate side project) for current conditions, then layers Open-Meteo on top for the two-day forecast.
