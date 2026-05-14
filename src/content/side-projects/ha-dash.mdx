@@ -8,7 +8,7 @@ featured: true
 order: 1
 ---
 
-A wall-mounted kitchen display Emma and I built to externalise the day-to-day mental overhead: what's for dinner, did anyone start the laundry, is it going to rain on the run later, what's on the bin schedule. We use it every day, which means every annoyance turns into an issue and every fix ships within minutes. Pushing to `main` triggers GitHub Actions, the LXC pulls and restarts, the kiosk refreshes.
+A wall-mounted kitchen display Emma and I built to externalise the day-to-day mental overhead: what's for dinner, did anyone start the laundry, is it going to rain on the run later, what's on the bin schedule. Being both the developers and the daily users lets us ship the changes we want quickly. Pushing to `main` triggers GitHub Actions, the LXC pulls and restarts, the kiosk refreshes.
 
 The frontend is React 18 + TypeScript + Tailwind on Vite, served as a static bundle. The backend is a Python Flask app that proxies to local services and stores per-list to-do state in SQLite. Both run inside a Proxmox LXC behind Nginx and Gunicorn; a Raspberry Pi in Chromium kiosk mode points at the URL and stays on the wall. The project was also a trial of agentic development workflows: most of the scaffolding came out of Claude Code, with Emma and me reviewing, editing, and architecting each module.
 
