@@ -32,3 +32,6 @@ lerna-debug.log*
 
 # Visual companion working dir
 .superpowers/
+
+# Local work plans
+.plans/

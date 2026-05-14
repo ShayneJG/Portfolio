@@ -7,7 +7,7 @@ import { withBase } from "../lib/url";
 interface Props {
   title: string;
   description?: string;
-  pageType?: "default" | "home" | "about" | "work" | "writing" | "contact";
+  pageType?: "default" | "home" | "about" | "work" | "side-projects" | "writing" | "contact";
 }
 
 const { title, description, pageType = "default" } = Astro.props;

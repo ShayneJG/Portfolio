@@ -1,6 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { withBase } from "../lib/url";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("sideProjects");
+const work = await getCollection("work");
+
+const featured =
+  projects.find((p) => p.data.featured) ??
+  projects.sort((a, b) => a.data.order - b.data.order)[0];
 ---
 
 <Layout title="Shayne Geilman" pageType="home">
@@ -16,20 +24,48 @@ import { withBase } from "../lib/url";
 
   <section class="content">
     <span class="label">Featured</span>
-    <p class="placeholder">
-      The featured case study will live here once the first case study is
-      written.
-    </p>
+    {
+      featured ? (
+        <div class="featured">
+          <h2>
+            <a href={withBase(`/side-projects/${featured.id}`)}>
+              {featured.data.title}
+            </a>
+          </h2>
+          <p class="featured-sub">{featured.data.subtitle}</p>
+          <span class="meta">
+            {featured.data.stack.join(" · ")} · {featured.data.date}
+          </span>
+        </div>
+      ) : (
+        <p class="placeholder">
+          The featured case study will live here once the first case study is
+          written.
+        </p>
+      )
+    }
   </section>
 
   <hr class="rule" />
 
-  <section class="content">
-    <span class="label">More work</span>
-    <p class="placeholder">
-      The project list will live here once the case studies and personal
-      projects are added to the <code>work</code> content collection.
-    </p>
+  <section class="content split">
+    <div>
+      <span class="label">Work</span>
+      <p>
+        Paid roles and the things I shipped in them.{" "}
+        <a href={withBase("/work")}>All work →</a>
+      </p>
+      {work.length === 0 && (
+        <p class="placeholder">Case studies for paid roles are in progress.</p>
+      )}
+    </div>
+    <div>
+      <span class="label">Side projects</span>
+      <p>
+        Personal builds, tools, and experiments.{" "}
+        <a href={withBase("/side-projects")}>All side projects →</a>
+      </p>
+    </div>
   </section>
 
   <hr class="rule" />
@@ -73,6 +109,36 @@ import { withBase } from "../lib/url";
     font-style: italic;
     font-size: 16px;
     max-width: var(--content-width);
+  }
+  .featured {
+    max-width: var(--content-width);
+  }
+  .featured h2 {
+    margin-top: var(--space-s);
+    margin-bottom: var(--space-xs);
+  }
+  .featured h2 a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .featured h2 a:hover {
+    color: var(--accent);
+  }
+  .featured-sub {
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin-bottom: var(--space-xs);
+  }
+  .split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  @media (min-width: 768px) {
+    .split {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3xl);
+    }
   }
   .about-writing {
     display: grid;
